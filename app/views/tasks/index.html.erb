@@ -3,7 +3,18 @@
 
   <%@tasks.each do |task|%>
   <li>
-    <%= task[:task] %> Status: <%= task[:status] %>
+    <p>
+      <%= task.id %>
+    </p>
+    <p>
+      <%= task.action %>
+    </p>
+    <p>
+      <%= task.description %>
+    </p>
+    <p>
+      <%= task.completion_date %>
+    </p>
   </li>
   <%end%>
 </ul>

@@ -1,15 +1,11 @@
-TASKS = [ { task: "Get laundry", status: "incomplete"},
-  { task: "Do CS Fun HW", status: "incomplete"},
-  { task: "take dog to vet", status: "complete"}]
-
 class TasksController < ApplicationController
   def index
-    @tasks = TASKS
+    @tasks = Task.all
   end
 
   def show
     task_id = params[:id].to_i
-    @task = TASKS[task_id]
+    @task = Task.find_by(id: task_id)
     if @task.nil?
       head :not_found
     end
