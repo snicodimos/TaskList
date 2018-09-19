@@ -3,18 +3,14 @@
 
   <%@tasks.each do |task|%>
   <li>
-    <p>
-      <%= task.id %>
-    </p>
-    <p>
+      <%= task.id %>.
       <%= task.action %>
-    </p>
-    <p>
       <%= task.description %>
-    </p>
-    <p>
       <%= task.completion_date %>
-    </p>
   </li>
   <%end%>
 </ul>
+
+<div>
+  &copy 2018, Ada Developers Academy
+</div>
