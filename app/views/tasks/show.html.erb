@@ -1,10 +1,26 @@
 <h2>Task details</h2>
+
 <p>
   <strong>Task:</strong>
   <%= @task.action%>
 </p>
 
 <p>
-  <strong>description:</strong>
+  <strong>Description:</strong>
   <%= @task.description%>
 </p>
+
+<p>
+  <strong>Completion Date:</strong>
+  <%= @task.completion_date%>
+</p>
+
+<div>
+  <button id="add_new">
+    <a href="/tasks/new">Add Task</a>
+  </button>
+
+  <button id="all_tasks">
+    <a href="/tasks">All Tasks</a>
+  </button>
+</div>

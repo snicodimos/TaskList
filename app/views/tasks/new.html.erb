@@ -4,15 +4,20 @@
 
 <h2>New Task Form</h2>
 
+<div class="field">
+
 <%=f.label :action%>
-<%=f.text_field :action, value: "Homework"%>
+<%=f.text_field :action, value: nil, placeholder: "Homework"%>
 
 <%=f.label :description%>
-<%=f.text_field :description, value: "Doing CS Fun Homeowork"%>
+<%=f.text_field :description, value: nil, placeholder: "Doing CS Fun Homeowork"%>
 
 <%=f.label :completion_date%>
-<%=f.text_field :completion_date, value: "2018-09-20"%>
+<%=f.text_field :completion_date, value: nil, placeholder: "2018-09-20"%>
+</div>
 
-<%=f.submit "Create a new task", class: "new-task-submit-button"%>
-
+<%=f.submit "Create a new task", class: "new_button"%>
+<button id="all_tasks">
+  <a href="/tasks">All Tasks</a>
+</button>
 <% end %>

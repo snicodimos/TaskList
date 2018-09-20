@@ -1,16 +1,26 @@
-<h1>Tasks</h1>
-<ul>
+<h1>TASKLIST</h1>
 
-  <%@tasks.each do |task|%>
-  <li>
-      <%= task.id %>.
-      <%= task.action %>
-      <%= task.description %>
-      <%= task.completion_date %>
-  </li>
-  <%end%>
-</ul>
+<section class="list">
 
-<div>
-  &copy 2018, Ada Developers Academy
-</div>
+  <div>
+    <button id="add_new">
+      <a href="/tasks/new">Add Task</a>
+    </button>
+
+    <button id="all_tasks">
+      <a href="/tasks">All Tasks</a>
+    </button>
+  </div>
+
+  <div class="list_title">
+    <h3>YOUR TASKS</h3>
+    <ol>
+      <%@tasks.each do |task|%>
+      <li class="items">
+        <%= task.action %>
+        <%= link_to "(View details)", task_path(task.id) %>
+      </li>
+      <%end%>
+    </ol>
+  </div>
+</section>
