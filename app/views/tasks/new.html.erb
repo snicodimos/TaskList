@@ -1,0 +1,18 @@
+
+
+<%= form_with model: @task, class: 'new-task-form' do |f| %>
+
+<h2>New Task Form</h2>
+
+<%=f.label :action%>
+<%=f.text_field :action, value: "Homework"%>
+
+<%=f.label :description%>
+<%=f.text_field :description, value: "Doing CS Fun Homeowork"%>
+
+<%=f.label :completion_date%>
+<%=f.text_field :completion_date, value: "2018-09-20"%>
+
+<%=f.submit "Create a new task", class: "new-task-submit-button"%>
+
+<% end %>
