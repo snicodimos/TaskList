@@ -29,5 +29,23 @@ class TasksController < ApplicationController
     end
   end
 
+  def edit
+    @task = Task.find(params[:id])
+  end
+
+  def update
+
+    @task = Task.find(params[:id])
+
+    if @task.update(
+      action: params[:task][:action],
+      description: params[:task][:description],
+      completion_date: params[:task][:completion_date])
+      redirect_to task_path(@task)
+
+    else
+      render :edit
+    end
+  end
 
 end
