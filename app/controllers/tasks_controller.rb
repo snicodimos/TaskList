@@ -4,8 +4,7 @@ class TasksController < ApplicationController
   end
 
   def show
-    task_id = params[:id].to_i
-    @task = Task.find_by(id: task_id)
+    @task = Task.find_by(id: params[:id])
     if @task.nil?
       head :not_found
     end
@@ -30,12 +29,12 @@ class TasksController < ApplicationController
   end
 
   def edit
-    @task = Task.find(params[:id])
+    @task = Task.find_by(id: params[:id])
   end
 
   def update
 
-    @task = Task.find(params[:id])
+    @task = Task.find_by(id: params[:id])
 
     if @task.update(
       action: params[:task][:action],
@@ -47,5 +46,14 @@ class TasksController < ApplicationController
       render :edit
     end
   end
+
+  def destroy
+    @task = Task.find_by(id: params[:id])
+    @task.destroy
+
+    redirect_to tasks_path
+
+  end
+
 
 end

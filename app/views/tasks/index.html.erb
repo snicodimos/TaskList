@@ -18,7 +18,9 @@
       <%@tasks.each do |task|%>
       <li class="items">
         <%= task.action %>
+        <%= %>
         <%= link_to "(View details)", task_path(task.id) %>
+        <%= link_to "(Delete)", task_path(task.id),method: :delete, data: { confirm: "Are you sure you want to delete this task?"}%>
       </li>
       <%end%>
     </ol>

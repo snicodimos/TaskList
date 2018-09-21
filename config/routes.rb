@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root 'tasks#index'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   # the "as:" tasks part is defining a nickname for a path (in this case'/tasks')
   get '/tasks', to: 'tasks#index'
@@ -15,6 +16,6 @@ Rails.application.routes.draw do
 
   patch '/tasks/:id', to: 'tasks#update'
 
-  delete '/tasks/:id', to: 'tasks#destroy', as: 'delete_task'
+  delete '/tasks/:id', to: 'tasks#destroy'
 
 end
