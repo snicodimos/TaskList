@@ -15,14 +15,10 @@
   <%= @task.completion_date%>
 </p>
 
-<div>
+<button>
+  <%= link_to "Edit Task", edit_task_path%>
+</button>
 
-  <button id="edit_task">
-    <a href="/tasks/:id/edit">Edit Task</a>
-  </button>
-
-  <button id="all_tasks">
-    <a href="/tasks">All Tasks</a>
-  </button>
-
-</div>
+<button>
+  <%= link_to "All Tasks", tasks_path%>
+</button>

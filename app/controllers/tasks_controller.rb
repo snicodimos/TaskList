@@ -1,6 +1,6 @@
 class TasksController < ApplicationController
   def index
-    @tasks = Task.all
+    @tasks = Task.all.order(:id)
   end
 
   def show
@@ -15,11 +15,8 @@ class TasksController < ApplicationController
   end
 
   def create
-    @task = Task.new(
-      action: params[:task][:action],
-      description: params[:task][:description],
-      completion_date: params[:task][:completion_date]
-    )
+    filtered_task_params = task_params()
+    @task = Task.new(filtered_task_params)
 
     if @task.save
       redirect_to tasks_path
@@ -34,13 +31,13 @@ class TasksController < ApplicationController
 
   def update
 
-    @task = Task.find_by(id: params[:id])
+    task = Task.find_by(id: params[:id])
 
-    if @task.update(
-      action: params[:task][:action],
-      description: params[:task][:description],
-      completion_date: params[:task][:completion_date])
-      redirect_to task_path(@task)
+    filtered_task_params = task_params()
+
+    if task.update(filtered_task_params)
+
+      redirect_to task_path(task)
 
     else
       render :edit
@@ -55,5 +52,13 @@ class TasksController < ApplicationController
 
   end
 
+  private
+  def task_params
+    return params.require(:task).permit(
+      :action,
+      :description,
+      :completion_date
+    )
+  end
 
 end
