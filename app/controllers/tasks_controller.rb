@@ -56,14 +56,15 @@ class TasksController < ApplicationController
     @task = Task.find(params[:id])
     if @task.completed == false
       @task.update(completed: true)
+      @task.update(completed_date: Date.today)
     elsif @task.completed == true
       @task.update(completed: false)
+      @task.update(completed_date: nil)
     end
     @task.save
 
     redirect_to tasks_path
   end
-
 
 
   private
@@ -72,7 +73,8 @@ class TasksController < ApplicationController
       :action,
       :description,
       :completion_date,
-      :completed
+      :completed,
+      :completed_date
     )
   end
 
