@@ -5,17 +5,16 @@
 <div class="field">
 
 <%=f.label :action%>
-<%=f.text_field :action, value: nil, placeholder: "Homework"%>
+<%=f.text_field :action%>
 
 <%=f.label :description%>
-<%=f.text_field :description, value: nil, placeholder: "Doing CS Fun Homeowork"%>
+<%=f.text_field :description%>
 
 <%=f.label :completion_date%>
-<%=f.text_field :completion_date, value: nil, placeholder: "2018-09-20"%>
+<%=f.text_field :completion_date%>
 
 </div>
 
-<%=f.submit "Create new task", class: "button"%>
-<%=f.submit "All Tasks", class:"button"%>
+<%=f.submit button_name, class: "button"%>
 
 <% end %>

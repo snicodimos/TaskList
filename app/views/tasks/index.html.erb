@@ -5,11 +5,21 @@
   <ol>
     <%@tasks.each do |task|%>
     <li class="items">
-      <%= link_to task.action, task_path(task.id)%> <br />
+      <strong >
+          <% if task.completed == true %>
+          <nav id="something">
+          <%= link_to task.action, task_path(task.id)%>
+        </nav>
+        <% else %>
+        <%= link_to task.action, task_path(task.id) %>
+        <%end%>
+      </strong>
+      <br >
 
       <%= if task.completed == false then link_to "Mark Complete", complete_task_path(task.id), method: :patch
-       else link_to "Unmark Complete", complete_task_path(task.id), method: :patch
-       end %>
+      else link_to "Unmark Complete", complete_task_path(task.id), method: :patch
+      end %>
+
 
       <%= link_to "| Edit ", edit_task_path(task.id) %>
 

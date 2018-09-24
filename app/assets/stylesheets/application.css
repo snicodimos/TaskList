@@ -46,6 +46,8 @@ li {
 
 .items {
   font-family: sans-serif;
+  color: Black;
+  text-decoration: none;
 }
 
 div {
@@ -92,4 +94,15 @@ h3 {
   color: white;
   text-align: center;
   margin-top: 20px;
+}
+
+#something {
+  text-decoration: line-through;
+  color: black;
+  padding: 0;
+  margin: 0;
+}
+
+strong {
+  text-decoration: none;
 }
