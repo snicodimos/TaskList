@@ -8502,3 +8502,297 @@ Completed 200 OK in 24ms (Views: 20.7ms | ActiveRecord: 0.3ms)
 
 
   [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+Started GET "/tasks" for 127.0.0.1 at 2018-09-23 18:54:41 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms)
+
+
+
+SyntaxError - syntax error, unexpected ',', expecting keyword_then or ';' or '\n'
+...nd=( if task.completed = false, link_to "Mark Complete", com...
+...                              ^
+/Users/semretnicodimos/Documents/Ada_C10/Projects/TaskList/app/views/tasks/index.html.erb:11: syntax error, unexpected keyword_else, expecting ')'
+      else link_to "Unmark Complete", c...
+      ^~~~
+/Users/semretnicodimos/Documents/Ada_C10/Projects/TaskList/app/views/tasks/index.html.erb:12: syntax error, unexpected keyword_end, expecting ')'
+      end  );@output_buffer.safe_appen...
+      ^~~
+/Users/semretnicodimos/Documents/Ada_C10/Projects/TaskList/app/views/tasks/index.html.erb:18: syntax error, unexpected keyword_end, expecting ')'
+'.freeze;    end
+             ^~~
+/Users/semretnicodimos/Documents/Ada_C10/Projects/TaskList/app/views/tasks/index.html.erb:23: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+          ^~~~~~
+/Users/semretnicodimos/Documents/Ada_C10/Projects/TaskList/app/views/tasks/index.html.erb:25: syntax error, unexpected keyword_end, expecting ')'
+          end
+          ^~~:
+  app/views/tasks/index.html.erb:10:in `'
+
+Started POST "/__better_errors/a69dc665d131f3f3/variables" for 127.0.0.1 at 2018-09-23 18:54:41 -0700
+  [1m[36mTask Load (0.8ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Started GET "/tasks" for 127.0.0.1 at 2018-09-23 18:55:49 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (1.1ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms)
+
+
+
+SyntaxError - syntax error, unexpected ',', expecting keyword_then or ';' or '\n'
+...nd=( if task.completed = false, link_to "Mark Complete", com...
+...                              ^
+/Users/semretnicodimos/Documents/Ada_C10/Projects/TaskList/app/views/tasks/index.html.erb:11: syntax error, unexpected keyword_else, expecting ')'
+      else link_to "Unmark Complete", c...
+      ^~~~
+/Users/semretnicodimos/Documents/Ada_C10/Projects/TaskList/app/views/tasks/index.html.erb:23: syntax error, unexpected keyword_ensure, expecting end-of-input
+          ensure
+          ^~~~~~:
+  app/views/tasks/index.html.erb:10:in `'
+
+Started POST "/__better_errors/2be7ca60e257a052/variables" for 127.0.0.1 at 2018-09-23 18:55:49 -0700
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Started GET "/tasks" for 127.0.0.1 at 2018-09-23 18:56:05 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (1.2ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms)
+
+
+
+SyntaxError - syntax error, unexpected tIDENTIFIER, expecting keyword_then or ';' or '\n'
+... task.completed = false link_to "Mark Complete", complete_ta...
+...                        ^~~~~~~
+/Users/semretnicodimos/Documents/Ada_C10/Projects/TaskList/app/views/tasks/index.html.erb:11: syntax error, unexpected keyword_else, expecting ')'
+      else link_to "Unmark Complete", c...
+      ^~~~
+/Users/semretnicodimos/Documents/Ada_C10/Projects/TaskList/app/views/tasks/index.html.erb:23: syntax error, unexpected keyword_ensure, expecting end-of-input
+          ensure
+          ^~~~~~:
+  app/views/tasks/index.html.erb:10:in `'
+
+Started POST "/__better_errors/0036ef9e3c640f3c/variables" for 127.0.0.1 at 2018-09-23 18:56:06 -0700
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Started GET "/tasks" for 127.0.0.1 at 2018-09-23 18:56:14 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (1.2ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms)
+
+
+
+SyntaxError - syntax error, unexpected tIDENTIFIER, expecting keyword_then or ';' or '\n'
+...task.completed == false link_to "Mark Complete", complete_ta...
+...                        ^~~~~~~
+/Users/semretnicodimos/Documents/Ada_C10/Projects/TaskList/app/views/tasks/index.html.erb:11: syntax error, unexpected keyword_else, expecting ')'
+      else link_to "Unmark Complete", c...
+      ^~~~
+/Users/semretnicodimos/Documents/Ada_C10/Projects/TaskList/app/views/tasks/index.html.erb:23: syntax error, unexpected keyword_ensure, expecting end-of-input
+          ensure
+          ^~~~~~:
+  app/views/tasks/index.html.erb:10:in `'
+
+Started POST "/__better_errors/41550a988eb51f34/variables" for 127.0.0.1 at 2018-09-23 18:56:14 -0700
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Started GET "/tasks" for 127.0.0.1 at 2018-09-23 18:56:23 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms)
+
+
+
+SyntaxError - syntax error, unexpected ',', expecting keyword_then or ';' or '\n'
+...d=( if task.completed == false, link_to "Mark Complete", com...
+...                              ^
+/Users/semretnicodimos/Documents/Ada_C10/Projects/TaskList/app/views/tasks/index.html.erb:11: syntax error, unexpected keyword_else, expecting ')'
+      else link_to "Unmark Complete", c...
+      ^~~~
+/Users/semretnicodimos/Documents/Ada_C10/Projects/TaskList/app/views/tasks/index.html.erb:23: syntax error, unexpected keyword_ensure, expecting end-of-input
+          ensure
+          ^~~~~~:
+  app/views/tasks/index.html.erb:10:in `'
+
+Started POST "/__better_errors/f53543c904a4afdb/variables" for 127.0.0.1 at 2018-09-23 18:56:24 -0700
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Started GET "/tasks" for 127.0.0.1 at 2018-09-23 18:56:53 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (2.6ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms)
+
+
+
+SyntaxError - syntax error, unexpected ',', expecting keyword_then or ';' or '\n'
+...d=( if task.completed == false, link_to "Mark Complete", com...
+...                              ^
+/Users/semretnicodimos/Documents/Ada_C10/Projects/TaskList/app/views/tasks/index.html.erb:23: syntax error, unexpected keyword_ensure, expecting end-of-input
+          ensure
+          ^~~~~~:
+  app/views/tasks/index.html.erb:10:in `'
+
+Started POST "/__better_errors/2a207aa49393e9ba/variables" for 127.0.0.1 at 2018-09-23 18:56:53 -0700
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Started GET "/tasks" for 127.0.0.1 at 2018-09-23 18:57:49 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (1.5ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms)
+
+
+
+SyntaxError - syntax error, unexpected ')', expecting keyword_then or ';' or '\n'
+...d=( if task.completed == false);@output_buffer.safe_append='...
+...                              ^
+/Users/semretnicodimos/Documents/Ada_C10/Projects/TaskList/app/views/tasks/index.html.erb:11: syntax error, unexpected keyword_else, expecting ')'
+'.freeze;      else link_to "Unmark Complete", c...
+               ^~~~
+/Users/semretnicodimos/Documents/Ada_C10/Projects/TaskList/app/views/tasks/index.html.erb:12: syntax error, unexpected keyword_end, expecting ')'
+       end 
+       ^~~
+/Users/semretnicodimos/Documents/Ada_C10/Projects/TaskList/app/views/tasks/index.html.erb:18: syntax error, unexpected keyword_end, expecting ')'
+'.freeze;     end 
+              ^~~
+/Users/semretnicodimos/Documents/Ada_C10/Projects/TaskList/app/views/tasks/index.html.erb:23: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+          ^~~~~~
+/Users/semretnicodimos/Documents/Ada_C10/Projects/TaskList/app/views/tasks/index.html.erb:25: syntax error, unexpected keyword_end, expecting ')'
+          end
+          ^~~:
+  app/views/tasks/index.html.erb:10:in `'
+
+Started POST "/__better_errors/fcdd834fa58c04d1/variables" for 127.0.0.1 at 2018-09-23 18:57:49 -0700
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Started GET "/tasks" for 127.0.0.1 at 2018-09-23 18:59:21 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms)
+
+
+
+SyntaxError - syntax error, unexpected ')', expecting keyword_then or ';' or '\n'
+...d=( if task.completed == false);@output_buffer.safe_append='...
+...                              ^
+/Users/semretnicodimos/Documents/Ada_C10/Projects/TaskList/app/views/tasks/index.html.erb:11: syntax error, unexpected keyword_else
+...ze;@output_buffer.append=( else link_to "Unmark Complete", c...
+...                           ^~~~
+/Users/semretnicodimos/Documents/Ada_C10/Projects/TaskList/app/views/tasks/index.html.erb:12: syntax error, unexpected keyword_end, expecting ')'
+'.freeze;       end 
+                ^~~
+/Users/semretnicodimos/Documents/Ada_C10/Projects/TaskList/app/views/tasks/index.html.erb:18: syntax error, unexpected keyword_end, expecting ')'
+'.freeze;     end 
+              ^~~
+/Users/semretnicodimos/Documents/Ada_C10/Projects/TaskList/app/views/tasks/index.html.erb:23: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+          ^~~~~~
+/Users/semretnicodimos/Documents/Ada_C10/Projects/TaskList/app/views/tasks/index.html.erb:25: syntax error, unexpected keyword_end, expecting ')'
+          end
+          ^~~:
+  app/views/tasks/index.html.erb:10:in `'
+
+Started POST "/__better_errors/30e20c43fa1c7d08/variables" for 127.0.0.1 at 2018-09-23 18:59:21 -0700
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Started GET "/tasks" for 127.0.0.1 at 2018-09-23 19:00:30 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms)
+
+
+
+SyntaxError - syntax error, unexpected ')'
+...f task.completed == false then);@output_buffer.safe_append='...
+...                              ^
+/Users/semretnicodimos/Documents/Ada_C10/Projects/TaskList/app/views/tasks/index.html.erb:11: syntax error, unexpected keyword_else
+...ze;@output_buffer.append=( else link_to "Unmark Complete", c...
+...                           ^~~~
+/Users/semretnicodimos/Documents/Ada_C10/Projects/TaskList/app/views/tasks/index.html.erb:18: syntax error, unexpected keyword_end, expecting ')'
+'.freeze;     end 
+              ^~~
+/Users/semretnicodimos/Documents/Ada_C10/Projects/TaskList/app/views/tasks/index.html.erb:23: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+          ^~~~~~
+/Users/semretnicodimos/Documents/Ada_C10/Projects/TaskList/app/views/tasks/index.html.erb:25: syntax error, unexpected keyword_end, expecting ')'
+          end
+          ^~~:
+  app/views/tasks/index.html.erb:10:in `'
+
+Started POST "/__better_errors/5f5c2dc2721909df/variables" for 127.0.0.1 at 2018-09-23 19:00:30 -0700
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Started GET "/tasks" for 127.0.0.1 at 2018-09-23 19:00:57 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms)
+
+
+
+SyntaxError - syntax error, unexpected ')', expecting keyword_end
+...path(task.id), method: :patch );@output_buffer.safe_append='
+...                              ^
+/Users/semretnicodimos/Documents/Ada_C10/Projects/TaskList/app/views/tasks/index.html.erb:18: syntax error, unexpected keyword_end, expecting ')'
+'.freeze;     end 
+              ^~~
+/Users/semretnicodimos/Documents/Ada_C10/Projects/TaskList/app/views/tasks/index.html.erb:23: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+          ^~~~~~
+/Users/semretnicodimos/Documents/Ada_C10/Projects/TaskList/app/views/tasks/index.html.erb:25: syntax error, unexpected keyword_end, expecting ')'
+          end
+          ^~~:
+  app/views/tasks/index.html.erb:11:in `'
+
+Started POST "/__better_errors/076512f10d67e86c/variables" for 127.0.0.1 at 2018-09-23 19:00:57 -0700
+  [1m[36mTask Load (0.6ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Started GET "/tasks" for 127.0.0.1 at 2018-09-23 19:01:26 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC[0m
+  ↳ app/views/tasks/index.html.erb:6
+  Rendered tasks/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 23ms (Views: 20.1ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/tasks/15/complete" for 127.0.0.1 at 2018-09-23 19:01:54 -0700
+Processing by TasksController#complete as HTML
+  Parameters: {"authenticity_token"=>"9mbv3pUCyXrJbA9r/nOo/szJvOTBYq1IyGhzI0bin0+USlF8lJYPbyzpGP3eCKOJV09UzlasS2JMKZH5tWGf+A==", "id"=>"15"}
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:56
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tasks_controller.rb:61
+  [1m[36mTask Update (0.6ms)[0m  [1m[33mUPDATE "tasks" SET "completed" = $1, "updated_at" = $2 WHERE "tasks"."id" = $3[0m  [["completed", false], ["updated_at", "2018-09-24 02:01:54.520113"], ["id", 15]]
+  ↳ app/controllers/tasks_controller.rb:61
+  [1m[35m (5.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tasks_controller.rb:61
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tasks_controller.rb:62
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tasks_controller.rb:62
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tasks_controller.rb:64
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tasks_controller.rb:64
+Redirected to http://localhost:3000/tasks
+Completed 302 Found in 13ms (ActiveRecord: 7.4ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2018-09-23 19:01:54 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC[0m
+  ↳ app/views/tasks/index.html.erb:6
+  Rendered tasks/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 22ms (Views: 19.5ms | ActiveRecord: 0.4ms)
+
+
