@@ -17,7 +17,7 @@ class TasksController < ApplicationController
   def create
     filtered_task_params = task_params()
     @task = Task.new(filtered_task_params)
-
+    @task.completed = false
     if @task.save
       redirect_to tasks_path
     else
@@ -52,12 +52,27 @@ class TasksController < ApplicationController
 
   end
 
+  def complete
+    @task = Task.find(params[:id])
+    if @task.completed == false
+      @task.update(completed: true)
+    elsif @task.completed == true
+      @task.update(completed: false)
+    end
+    @task.save
+
+    redirect_to tasks_path
+  end
+
+
+
   private
   def task_params
     return params.require(:task).permit(
       :action,
       :description,
-      :completion_date
+      :completion_date,
+      :completed
     )
   end
 

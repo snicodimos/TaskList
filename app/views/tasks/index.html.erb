@@ -1,27 +1,18 @@
 <h1>TASKLIST</h1>
 
-<section class="list">
-  <div>
-    <button id="add_new">
-      <a href="/tasks/new">Add Task</a>
-    </button>
+<section class="list_section">
+  <h3>YOUR TASKS</h3>
+  <ol>
+    <%@tasks.each do |task|%>
+    <li class="items">
+      <%= link_to task.action, task_path(task.id)%> <br />
 
-    <button id="all_tasks">
-      <a href="/tasks">All Tasks</a>
-    </button>
-  </div>
+      <%= link_to "Mark Complete", complete_task_path(task.id), method: :patch %>
 
+      <%= link_to "| Edit ", edit_task_path(task.id) %>
 
-  <div class="list_title">
-    <h3>YOUR TASKS</h3>
-    <ol>
-      <%@tasks.each do |task|%>
-      <li class="items">
-        <%= link_to task.action, task_path(task.id)%> <br>
-        <%= link_to "| Edit |", edit_task_path(task.id) %>
-        <%= link_to "| Delete |", task_path(task.id),method: :delete, data: { confirm: "Are you sure you want to delete this task?"}%>
-      </li>
-      <%end%>
-    </ol>
-  </div>
+      <%= link_to "| Delete ", task_path(task.id), method: :delete, data: { confirm: "Are you sure you want to delete this task?"}%>
+    </li>
+    <%end%>
+  </ol>
 </section>

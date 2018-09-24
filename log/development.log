@@ -5831,3 +5831,2568 @@ Processing by TasksController#index as HTML
 Completed 200 OK in 29ms (Views: 26.1ms | ActiveRecord: 0.3ms)
 
 
+Started GET "/tasks" for 127.0.0.1 at 2018-09-22 15:56:37 -0700
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/semretnicodimos/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (12.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC[0m
+  ↳ app/views/tasks/index.html.erb:18
+  Rendered tasks/index.html.erb within layouts/application (34.9ms)
+Completed 200 OK in 290ms (Views: 256.0ms | ActiveRecord: 22.9ms)
+
+
+Started GET "/tasks/1" for 127.0.0.1 at 2018-09-22 15:58:13 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:7
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 37ms (Views: 19.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/tasks/1/edit" for 127.0.0.1 at 2018-09-22 15:58:15 -0700
+Processing by TasksController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:29
+  Rendering tasks/edit.html.erb within layouts/application
+  Rendered tasks/edit.html.erb within layouts/application (10.4ms)
+Completed 200 OK in 31ms (Views: 27.0ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/tasks/1" for 127.0.0.1 at 2018-09-22 15:58:19 -0700
+Processing by TasksController#update as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MS0reB8nSfsg7ZSExu07Qa8LF7mAczT/1SR0lWL4hnSo6+P4+gFjEaILS1nuO3kUt1ax7nCRxqCDEV71QJeQtg==", "task"=>{"action"=>"Water plants", "description"=>"Water the grass and all potted plants", "completion_date"=>"2018-09-20"}, "commit"=>"Update Task", "id"=>"1"}
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:34
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tasks_controller.rb:38
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tasks_controller.rb:38
+Redirected to http://localhost:3000/tasks/1
+Completed 200 OK in 5ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/tasks/1" for 127.0.0.1 at 2018-09-22 15:58:19 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:7
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 25ms (Views: 21.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2018-09-22 15:58:22 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.6ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC[0m
+  ↳ app/views/tasks/index.html.erb:18
+  Rendered tasks/index.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 32ms (Views: 28.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/tasks/1/edit" for 127.0.0.1 at 2018-09-22 15:58:26 -0700
+Processing by TasksController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:29
+  Rendering tasks/edit.html.erb within layouts/application
+  Rendered tasks/edit.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 35ms (Views: 31.1ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/tasks/1" for 127.0.0.1 at 2018-09-22 15:58:44 -0700
+Processing by TasksController#update as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"thPEbwNW9sMqpKxg0CB5KUX4SV6x7LkHmiELSam8ODov1Qzv5nDcKahCc7349jt8XaXvCUEOS1jMFCEpi9Mu+A==", "task"=>{"action"=>"Water plants", "description"=>"Water the grass and all potted plants indoor and outdoor", "completion_date"=>"2018-09-20"}, "commit"=>"Update Task", "id"=>"1"}
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:34
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tasks_controller.rb:38
+  [1m[36mTask Update (6.0ms)[0m  [1m[33mUPDATE "tasks" SET "description" = $1, "updated_at" = $2 WHERE "tasks"."id" = $3[0m  [["description", "Water the grass and all potted plants indoor and outdoor"], ["updated_at", "2018-09-22 22:58:44.668329"], ["id", 1]]
+  ↳ app/controllers/tasks_controller.rb:38
+  [1m[35m (12.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tasks_controller.rb:38
+Redirected to http://localhost:3000/tasks/1
+Completed 200 OK in 22ms (ActiveRecord: 18.5ms)
+
+
+Started GET "/tasks/1" for 127.0.0.1 at 2018-09-22 15:58:44 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:7
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 47ms (Views: 43.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2018-09-22 15:58:47 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.6ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC[0m
+  ↳ app/views/tasks/index.html.erb:18
+  Rendered tasks/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 30ms (Views: 26.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2018-09-22 16:25:38 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (1.0ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC[0m
+  ↳ app/views/tasks/index.html.erb:18
+  Rendered tasks/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 27ms (Views: 23.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/tasks/new" for 127.0.0.1 at 2018-09-22 16:25:41 -0700
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/_forms.html.erb (2.7ms)
+  Rendered tasks/new.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 37ms (Views: 32.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks/5/edit" for 127.0.0.1 at 2018-09-22 16:26:17 -0700
+Processing by TasksController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:29
+  Rendering tasks/edit.html.erb within layouts/application
+  Rendered tasks/edit.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 30ms (Views: 24.2ms | ActiveRecord: 0.7ms)
+
+
+Started PATCH "/tasks/5" for 127.0.0.1 at 2018-09-22 16:27:29 -0700
+Processing by TasksController#update as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3uN/OHPGVHdR4cfcSsjG3CmfYht0i2ePkY/CC07en8O8z8GaclKSYrRk0Epqs82rshmKMeNFgaUVziDRvV2fdA==", "task"=>{"action"=>"CS Fun HW2", "description"=>"Some reading and reverse sentence hw and some more reading ", "completion_date"=>"2018-09-23"}, "commit"=>"Update Task", "id"=>"5"}
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:34
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tasks_controller.rb:38
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tasks_controller.rb:38
+Redirected to http://localhost:3000/tasks/5
+Completed 200 OK in 4ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/tasks/5" for 127.0.0.1 at 2018-09-22 16:27:29 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:7
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 36ms (Views: 31.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tasks/5/edit" for 127.0.0.1 at 2018-09-22 16:27:44 -0700
+Processing by TasksController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mTask Load (0.6ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:29
+  Rendering tasks/edit.html.erb within layouts/application
+  Rendered tasks/edit.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 45ms (Views: 39.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/tasks/5/edit" for 127.0.0.1 at 2018-09-22 16:28:28 -0700
+Processing by TasksController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:29
+  Rendering tasks/edit.html.erb within layouts/application
+  Rendered tasks/edit.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 31ms (Views: 26.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tasks/5/edit" for 127.0.0.1 at 2018-09-22 16:29:04 -0700
+Processing by TasksController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:29
+  Rendering tasks/edit.html.erb within layouts/application
+  Rendered tasks/edit.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 42ms (Views: 38.4ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/tasks/5" for 127.0.0.1 at 2018-09-22 16:29:13 -0700
+Processing by TasksController#update as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wQUOxS+xdMCQfgM+YHdxXmvM/1Ei1MKGNe/T4Nioy5GjKbBnLiWy1XX7FKhADHop8EoXe7UaJKyxrjE6KyvLJg==", "task"=>{"action"=>"CS Fun HW2", "description"=>"Some reading and reverse sentence hw and some more reading ", "completion_date"=>"2018-09-23"}, "commit"=>"All Tasks", "id"=>"5"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:34
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tasks_controller.rb:38
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tasks_controller.rb:38
+Redirected to http://localhost:3000/tasks/5
+Completed 200 OK in 13ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/tasks/5" for 127.0.0.1 at 2018-09-22 16:29:13 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:7
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 31ms (Views: 27.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2018-09-22 16:29:18 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC[0m
+  ↳ app/views/tasks/index.html.erb:18
+  Rendered tasks/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 31ms (Views: 27.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2018-09-22 16:30:30 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC[0m
+  ↳ app/views/tasks/index.html.erb:18
+  Rendered tasks/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 23ms (Views: 20.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2018-09-22 16:30:33 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC[0m
+  ↳ app/views/tasks/index.html.erb:18
+  Rendered tasks/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 23ms (Views: 20.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2018-09-22 16:30:51 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC[0m
+  ↳ app/views/tasks/index.html.erb:18
+  Rendered tasks/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 23ms (Views: 19.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tasks/new" for 127.0.0.1 at 2018-09-22 16:31:25 -0700
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/_forms.html.erb (2.0ms)
+  Rendered tasks/new.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 30ms (Views: 27.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2018-09-22 16:35:03 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:4
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:4
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:4
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:4
+  Rendered tasks/index.html.erb within layouts/application (255.8ms)
+Completed 500 Internal Server Error in 264ms (ActiveRecord: 0.5ms)
+
+
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+
+NameError - undefined local variable or method `f' for #<#<Class:0x00007fc28c06fa08>:0x00007fc28c271f90>:
+  app/views/tasks/index.html.erb:5:in `_app_views_tasks_index_html_erb__3781230279937660668_70236775881500'
+
+Started POST "/__better_errors/741f230241901186/variables" for 127.0.0.1 at 2018-09-22 16:35:03 -0700
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Started GET "/tasks" for 127.0.0.1 at 2018-09-22 16:35:55 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:4
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:4
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:4
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:4
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:4
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:4
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:4
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:4
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:4
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:4
+  Rendered tasks/index.html.erb within layouts/application (536.7ms)
+Completed 500 Internal Server Error in 545ms (ActiveRecord: 1.4ms)
+
+
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+
+NameError - undefined local variable or method `f' for #<#<Class:0x00007fc28c06fa08>:0x00007fc28ad73d00>:
+  app/views/tasks/index.html.erb:5:in `_app_views_tasks_index_html_erb__3781230279937660668_70236764881720'
+
+Started POST "/__better_errors/c6f50e8022f34c8a/variables" for 127.0.0.1 at 2018-09-22 16:35:56 -0700
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Started GET "/tasks" for 127.0.0.1 at 2018-09-22 16:37:03 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.1ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:4
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:4
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:4
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:4
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:4
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:4
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:4
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:4
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:4
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:4
+  Rendered tasks/index.html.erb within layouts/application (541.0ms)
+Completed 500 Internal Server Error in 551ms (ActiveRecord: 1.4ms)
+
+
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+
+NameError - undefined local variable or method `f' for #<#<Class:0x00007fc28c06fa08>:0x00007fc28ad73878>:
+  app/views/tasks/index.html.erb:5:in `_app_views_tasks_index_html_erb__3781230279937660668_70236764898040'
+
+Started POST "/__better_errors/b2c1794e1faecf80/variables" for 127.0.0.1 at 2018-09-22 16:37:04 -0700
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/rubies/ruby-2.5.1/lib/ruby/gems/2.5.0/gems/did_you_mean-1.2.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Started GET "/tasks" for 127.0.0.1 at 2018-09-22 16:37:22 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC[0m
+  ↳ app/views/tasks/index.html.erb:8
+  Rendered tasks/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 22ms (Views: 18.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2018-09-22 16:39:53 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC[0m
+  ↳ app/views/tasks/index.html.erb:7
+  Rendered tasks/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 21ms (Views: 18.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2018-09-22 16:40:10 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC[0m
+  ↳ app/views/tasks/index.html.erb:7
+  Rendered tasks/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 22ms (Views: 18.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2018-09-22 16:42:14 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC[0m
+  ↳ app/views/tasks/index.html.erb:6
+  Rendered tasks/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 21ms (Views: 18.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2018-09-22 16:43:08 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC[0m
+  ↳ app/views/tasks/index.html.erb:6
+  Rendered tasks/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 19ms (Views: 16.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2018-09-22 16:43:25 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC[0m
+  ↳ app/views/tasks/index.html.erb:6
+  Rendered tasks/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 21ms (Views: 18.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2018-09-22 16:43:38 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC[0m
+  ↳ app/views/tasks/index.html.erb:6
+  Rendered tasks/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 21ms (Views: 18.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2018-09-22 16:44:36 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC[0m
+  ↳ app/views/tasks/index.html.erb:6
+  Rendered tasks/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 21ms (Views: 18.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2018-09-22 16:44:37 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC[0m
+  ↳ app/views/tasks/index.html.erb:6
+  Rendered tasks/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 30ms (Views: 27.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2018-09-22 16:47:04 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC[0m
+  ↳ app/views/tasks/index.html.erb:6
+  Rendered tasks/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 22ms (Views: 19.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2018-09-22 17:31:25 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.7ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC[0m
+  ↳ app/views/tasks/index.html.erb:6
+  Rendered tasks/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 38ms (Views: 34.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2018-09-22 17:32:02 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC[0m
+  ↳ app/views/tasks/index.html.erb:6
+  Rendered tasks/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 39ms (Views: 35.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2018-09-22 20:53:21 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.7ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC[0m
+  ↳ app/views/tasks/index.html.erb:6
+  Rendered tasks/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 32ms (Views: 29.1ms | ActiveRecord: 0.7ms)
+
+
+  [1m[36mTask Load (1.7ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (5.8ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4169262226251541860)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to AddTaskStatusToTasks (20180923163241)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (25.8ms)[0m  [1m[35mALTER TABLE "tasks" ADD "completed" boolen[0m
+  ↳ db/migrate/20180923163241_add_task_status_to_tasks.rb:3
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(4169262226251541860)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4169262226251541860)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to AddTaskStatusToTasks (20180923163241)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (1.2ms)[0m  [1m[35mALTER TABLE "tasks" ADD "completed" boolen[0m
+  ↳ db/migrate/20180923163241_add_task_status_to_tasks.rb:3
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(4169262226251541860)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4169262226251541860)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to AddTaskStatusToTasks (20180923163241)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (29.8ms)[0m  [1m[35mALTER TABLE "tasks" ADD "completed" boolean[0m
+  ↳ db/migrate/20180923163241_add_task_status_to_tasks.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180923163241"]]
+  ↳ bin/rails:9
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(4169262226251541860)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Started GET "/tasks" for 127.0.0.1 at 2018-09-23 09:39:31 -0700
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/semretnicodimos/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by TasksController#index as HTML
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.0ms)
+
+
+
+NameError - uninitialized constant Task::PrenceValidator:
+  app/models/task.rb:3:in `<class:Task>'
+  app/models/task.rb:1:in `<main>'
+  app/controllers/tasks_controller.rb:3:in `index'
+
+Started POST "/__better_errors/ee38e640b895d153/variables" for 127.0.0.1 at 2018-09-23 09:39:32 -0700
+Started GET "/tasks" for 127.0.0.1 at 2018-09-23 09:42:41 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (1.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC[0m
+  ↳ app/views/tasks/index.html.erb:6
+  Rendered tasks/index.html.erb within layouts/application (18.5ms)
+Completed 200 OK in 51ms (Views: 40.1ms | ActiveRecord: 6.2ms)
+
+
+  [1m[36mTask Load (1.8ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Started GET "/tasks" for 127.0.0.1 at 2018-09-23 14:43:20 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.6ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC[0m
+  ↳ app/views/tasks/index.html.erb:6
+  Rendered tasks/index.html.erb within layouts/application (33.2ms)
+Completed 200 OK in 85ms (Views: 72.3ms | ActiveRecord: 5.2ms)
+
+
+Started GET "/tasks/new" for 127.0.0.1 at 2018-09-23 14:43:32 -0700
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/_forms.html.erb (11.1ms)
+  Rendered tasks/new.html.erb within layouts/application (15.0ms)
+Completed 200 OK in 63ms (Views: 58.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/tasks" for 127.0.0.1 at 2018-09-23 14:44:08 -0700
+Processing by TasksController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8zotDnXl3AaCmH7CpAjCyWHaep6Ks564gi/HYSaFC51GHG1S0RG9yem9fGhF9E5cguFisXMILU7vyT0oM00vxg==", "task"=>{"action"=>"Test Boolean value", "description"=>"Added a new col on the db and wanted to check when creating a new task the value is false", "completion_date"=>"2018-09-23"}, "commit"=>"Create new task"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tasks_controller.rb:21
+  [1m[36mTask Create (24.9ms)[0m  [1m[32mINSERT INTO "tasks" ("action", "description", "created_at", "updated_at", "completion_date", "completed") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["action", "Test Boolean value"], ["description", "Added a new col on the db and wanted to check when creating a new task the value is false"], ["created_at", "2018-09-23 21:44:08.980242"], ["updated_at", "2018-09-23 21:44:08.980242"], ["completion_date", "2018-09-23"], ["completed", false]]
+  ↳ app/controllers/tasks_controller.rb:21
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tasks_controller.rb:21
+Redirected to http://localhost:3000/tasks
+Completed 200 OK in 35ms (ActiveRecord: 26.6ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2018-09-23 14:44:09 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (1.0ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC[0m
+  ↳ app/views/tasks/index.html.erb:6
+  Rendered tasks/index.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 36ms (Views: 32.2ms | ActiveRecord: 1.0ms)
+
+
+  [1m[36mTask Load (1.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."completed" IS NULL[0m
+Started DELETE "/tasks/1" for 127.0.0.1 at 2018-09-23 14:48:02 -0700
+Processing by TasksController#destroy as HTML
+  Parameters: {"authenticity_token"=>"6k39i3d9tRQE0pOfydw6DtkO9mSb7k13bEyWOF0SRSeIYUMpdulzAeFXhAnppzF5QogeTgwgq13oDXTirpFFkA==", "id"=>"1"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:48
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tasks_controller.rb:49
+  [1m[36mTask Destroy (0.3ms)[0m  [1m[31mDELETE FROM "tasks" WHERE "tasks"."id" = $1[0m  [["id", 1]]
+  ↳ app/controllers/tasks_controller.rb:49
+  [1m[35m (5.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tasks_controller.rb:49
+Redirected to http://localhost:3000/tasks
+Completed 302 Found in 22ms (ActiveRecord: 9.5ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2018-09-23 14:48:02 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC[0m
+  ↳ app/views/tasks/index.html.erb:6
+  Rendered tasks/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 25ms (Views: 22.2ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/tasks/2" for 127.0.0.1 at 2018-09-23 14:48:04 -0700
+Processing by TasksController#destroy as HTML
+  Parameters: {"authenticity_token"=>"C4S0siZsXKL4Lefxp4ewwUYO69AFAJXeGZuofO2UQx9pqAoQJ/iatx2o8GeH/Lu23YgD+pLOc/Sd2kqmHhdDqA==", "id"=>"2"}
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:48
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tasks_controller.rb:49
+  [1m[36mTask Destroy (5.8ms)[0m  [1m[31mDELETE FROM "tasks" WHERE "tasks"."id" = $1[0m  [["id", 2]]
+  ↳ app/controllers/tasks_controller.rb:49
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tasks_controller.rb:49
+Redirected to http://localhost:3000/tasks
+Completed 302 Found in 9ms (ActiveRecord: 6.7ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2018-09-23 14:48:04 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC[0m
+  ↳ app/views/tasks/index.html.erb:6
+  Rendered tasks/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 26ms (Views: 23.6ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/tasks/3" for 127.0.0.1 at 2018-09-23 14:48:06 -0700
+Processing by TasksController#destroy as HTML
+  Parameters: {"authenticity_token"=>"WaBuaIPcDfnw/a5tQ6USFFZck+v3EDw2ppz5sJIA/G07jNDKgkjL7BV4uftj3hljzdp7wWDe2hwi3RtqYYP82g==", "id"=>"3"}
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:48
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tasks_controller.rb:49
+  [1m[36mTask Destroy (0.3ms)[0m  [1m[31mDELETE FROM "tasks" WHERE "tasks"."id" = $1[0m  [["id", 3]]
+  ↳ app/controllers/tasks_controller.rb:49
+  [1m[35m (5.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tasks_controller.rb:49
+Redirected to http://localhost:3000/tasks
+Completed 302 Found in 9ms (ActiveRecord: 6.2ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2018-09-23 14:48:06 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC[0m
+  ↳ app/views/tasks/index.html.erb:6
+  Rendered tasks/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 25ms (Views: 22.2ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/tasks/4" for 127.0.0.1 at 2018-09-23 14:48:08 -0700
+Processing by TasksController#destroy as HTML
+  Parameters: {"authenticity_token"=>"4XHRk/dR9ecBA15wKIfUbC7drTXDXIiZVqG741lVaRODXW8x9sUz8uSGSeYI/N8btVtFH1SSbrPS4Fk5qtZppA==", "id"=>"4"}
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:48
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tasks_controller.rb:49
+  [1m[36mTask Destroy (0.4ms)[0m  [1m[31mDELETE FROM "tasks" WHERE "tasks"."id" = $1[0m  [["id", 4]]
+  ↳ app/controllers/tasks_controller.rb:49
+  [1m[35m (5.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tasks_controller.rb:49
+Redirected to http://localhost:3000/tasks
+Completed 302 Found in 10ms (ActiveRecord: 6.5ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2018-09-23 14:48:08 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC[0m
+  ↳ app/views/tasks/index.html.erb:6
+  Rendered tasks/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 24ms (Views: 21.2ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/tasks/5" for 127.0.0.1 at 2018-09-23 14:48:10 -0700
+Processing by TasksController#destroy as HTML
+  Parameters: {"authenticity_token"=>"qjCpHa0CInNcnAgr1QVqa6g/wMTj9yGq+SPLZWpdt7zIHBe/rJbkZrkZH731fmEcM7ko7nQ5x4B9Yim/md63Cw==", "id"=>"5"}
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:48
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tasks_controller.rb:49
+  [1m[36mTask Destroy (0.2ms)[0m  [1m[31mDELETE FROM "tasks" WHERE "tasks"."id" = $1[0m  [["id", 5]]
+  ↳ app/controllers/tasks_controller.rb:49
+  [1m[35m (5.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tasks_controller.rb:49
+Redirected to http://localhost:3000/tasks
+Completed 302 Found in 8ms (ActiveRecord: 6.0ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2018-09-23 14:48:10 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC[0m
+  ↳ app/views/tasks/index.html.erb:6
+  Rendered tasks/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 25ms (Views: 22.0ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/tasks/6" for 127.0.0.1 at 2018-09-23 14:48:12 -0700
+Processing by TasksController#destroy as HTML
+  Parameters: {"authenticity_token"=>"UikZajGsTDh/mhACge7iszOPewp1k8Q8CUgs4P1q33AwBafIMDiKLZofB5ShlenEqAmTIOJdIhaNCc46Dunfxw==", "id"=>"6"}
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:48
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tasks_controller.rb:49
+  [1m[36mTask Destroy (0.3ms)[0m  [1m[31mDELETE FROM "tasks" WHERE "tasks"."id" = $1[0m  [["id", 6]]
+  ↳ app/controllers/tasks_controller.rb:49
+  [1m[35m (5.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tasks_controller.rb:49
+Redirected to http://localhost:3000/tasks
+Completed 302 Found in 9ms (ActiveRecord: 6.4ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2018-09-23 14:48:12 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC[0m
+  ↳ app/views/tasks/index.html.erb:6
+  Rendered tasks/index.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 32ms (Views: 28.9ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/tasks/7" for 127.0.0.1 at 2018-09-23 14:48:13 -0700
+Processing by TasksController#destroy as HTML
+  Parameters: {"authenticity_token"=>"/Cc/aDF2w+DU6UZZS4slgjD2jk2cp28pWucwBK4uBmaeC4HKMOIF9TFsUc9r8C71q3BmZwtpiQPeptLeXa0G0Q==", "id"=>"7"}
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:48
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tasks_controller.rb:49
+  [1m[36mTask Destroy (0.3ms)[0m  [1m[31mDELETE FROM "tasks" WHERE "tasks"."id" = $1[0m  [["id", 7]]
+  ↳ app/controllers/tasks_controller.rb:49
+  [1m[35m (5.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tasks_controller.rb:49
+Redirected to http://localhost:3000/tasks
+Completed 302 Found in 9ms (ActiveRecord: 6.1ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2018-09-23 14:48:13 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC[0m
+  ↳ app/views/tasks/index.html.erb:6
+  Rendered tasks/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 25ms (Views: 22.7ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/tasks/8" for 127.0.0.1 at 2018-09-23 14:48:15 -0700
+Processing by TasksController#destroy as HTML
+  Parameters: {"authenticity_token"=>"wVJ1P1F+ZQhytHfHCSnnaOo02sAEh7AmK6vxwAPA7AqjfsudUOqjHZcxYFEpUuwfcbIy6pNJVgyv6hMa8EPsvQ==", "id"=>"8"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:48
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tasks_controller.rb:49
+  [1m[36mTask Destroy (0.3ms)[0m  [1m[31mDELETE FROM "tasks" WHERE "tasks"."id" = $1[0m  [["id", 8]]
+  ↳ app/controllers/tasks_controller.rb:49
+  [1m[35m (6.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tasks_controller.rb:49
+Redirected to http://localhost:3000/tasks
+Completed 302 Found in 9ms (ActiveRecord: 6.7ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2018-09-23 14:48:15 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC[0m
+  ↳ app/views/tasks/index.html.erb:6
+  Rendered tasks/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 24ms (Views: 21.3ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/tasks/9" for 127.0.0.1 at 2018-09-23 14:48:17 -0700
+Processing by TasksController#destroy as HTML
+  Parameters: {"authenticity_token"=>"FszQhgaKRZv8ULnMQ9tgsyMzNHlW6/M5Ta9Zb0Xdrjl04G4kBx6DjhnVrlpjoGvEuLXcU8ElFRPJ7ru1tl6ujg==", "id"=>"9"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:48
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tasks_controller.rb:49
+  [1m[36mTask Destroy (0.3ms)[0m  [1m[31mDELETE FROM "tasks" WHERE "tasks"."id" = $1[0m  [["id", 9]]
+  ↳ app/controllers/tasks_controller.rb:49
+  [1m[35m (5.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tasks_controller.rb:49
+Redirected to http://localhost:3000/tasks
+Completed 302 Found in 9ms (ActiveRecord: 6.2ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2018-09-23 14:48:17 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC[0m
+  ↳ app/views/tasks/index.html.erb:6
+  Rendered tasks/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 25ms (Views: 21.9ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/tasks/13" for 127.0.0.1 at 2018-09-23 14:48:20 -0700
+Processing by TasksController#destroy as HTML
+  Parameters: {"authenticity_token"=>"uiO2VOgvaT9D+rkJTWjR6rlJnyo8O7wMDAJWzGLU+NvYDwj26buvKqZ/rp9tE9qdIs93AKv1WiaIQ7QWkVf4bA==", "id"=>"13"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:48
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tasks_controller.rb:49
+  [1m[36mTask Destroy (0.2ms)[0m  [1m[31mDELETE FROM "tasks" WHERE "tasks"."id" = $1[0m  [["id", 13]]
+  ↳ app/controllers/tasks_controller.rb:49
+  [1m[35m (5.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tasks_controller.rb:49
+Redirected to http://localhost:3000/tasks
+Completed 302 Found in 9ms (ActiveRecord: 6.0ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2018-09-23 14:48:20 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC[0m
+  ↳ app/views/tasks/index.html.erb:6
+  Rendered tasks/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 26ms (Views: 23.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tasks/new" for 127.0.0.1 at 2018-09-23 14:48:25 -0700
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/_forms.html.erb (2.8ms)
+  Rendered tasks/new.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 32ms (Views: 29.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/tasks" for 127.0.0.1 at 2018-09-23 14:48:36 -0700
+Processing by TasksController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wLoiZT6YBuoe0vgbL5jqoNf55vigDf4aeM6FolNgOnR1nGI5mmxnJXX3+rHOZGY1NML+11m2TewVKH/rRqgeLw==", "task"=>{"action"=>"CS Fun HW", "description"=>"Some reading and reverse sentence hw and some more reading ", "completion_date"=>"2018-09-25"}, "commit"=>"Create new task"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tasks_controller.rb:21
+  [1m[36mTask Create (0.4ms)[0m  [1m[32mINSERT INTO "tasks" ("action", "description", "created_at", "updated_at", "completion_date", "completed") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["action", "CS Fun HW"], ["description", "Some reading and reverse sentence hw and some more reading "], ["created_at", "2018-09-23 21:48:36.980294"], ["updated_at", "2018-09-23 21:48:36.980294"], ["completion_date", "2018-09-25"], ["completed", false]]
+  ↳ app/controllers/tasks_controller.rb:21
+  [1m[35m (5.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tasks_controller.rb:21
+Redirected to http://localhost:3000/tasks
+Completed 200 OK in 10ms (ActiveRecord: 6.4ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2018-09-23 14:48:36 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC[0m
+  ↳ app/views/tasks/index.html.erb:6
+  Rendered tasks/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 36ms (Views: 31.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/tasks/new" for 127.0.0.1 at 2018-09-23 14:48:42 -0700
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/_forms.html.erb (2.1ms)
+  Rendered tasks/new.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 42ms (Views: 39.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/tasks" for 127.0.0.1 at 2018-09-23 14:48:57 -0700
+Processing by TasksController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Cr/m7b38CbBgvhNH3/WK6nUY8jf94h2yGYkxjIY0zIu/maaxGQhofwubEe0+CQZ/liPqGARZrkR0b8vFk/zo0A==", "task"=>{"action"=>"Cleaning", "description"=>"Clean the whole house for a party", "completion_date"=>"2018-09-25"}, "commit"=>"Create new task"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tasks_controller.rb:21
+  [1m[36mTask Create (0.3ms)[0m  [1m[32mINSERT INTO "tasks" ("action", "description", "created_at", "updated_at", "completion_date", "completed") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["action", "Cleaning"], ["description", "Clean the whole house for a party"], ["created_at", "2018-09-23 21:48:57.875926"], ["updated_at", "2018-09-23 21:48:57.875926"], ["completion_date", "2018-09-25"], ["completed", false]]
+  ↳ app/controllers/tasks_controller.rb:21
+  [1m[35m (5.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tasks_controller.rb:21
+Redirected to http://localhost:3000/tasks
+Completed 200 OK in 9ms (ActiveRecord: 6.3ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2018-09-23 14:48:57 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC[0m
+  ↳ app/views/tasks/index.html.erb:6
+  Rendered tasks/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 32ms (Views: 29.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tasks/new" for 127.0.0.1 at 2018-09-23 14:49:00 -0700
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/_forms.html.erb (3.1ms)
+  Rendered tasks/new.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 37ms (Views: 34.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/tasks" for 127.0.0.1 at 2018-09-23 14:49:13 -0700
+Processing by TasksController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HRATYRZ+QSBQsCGgomQ1sUqmWm/pPIwsLeaWyzOKDY6oNlM9soog7zuVIwpDmLkkqZ1CQBCHP9pAAGyCJkIp1Q==", "task"=>{"action"=>"Gardening", "description"=>"Front lawn weeding and planting new flowers", "completion_date"=>"2018-09-30"}, "commit"=>"Create new task"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tasks_controller.rb:21
+  [1m[36mTask Create (0.4ms)[0m  [1m[32mINSERT INTO "tasks" ("action", "description", "created_at", "updated_at", "completion_date", "completed") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["action", "Gardening"], ["description", "Front lawn weeding and planting new flowers"], ["created_at", "2018-09-23 21:49:13.718674"], ["updated_at", "2018-09-23 21:49:13.718674"], ["completion_date", "2018-09-30"], ["completed", false]]
+  ↳ app/controllers/tasks_controller.rb:21
+  [1m[35m (6.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tasks_controller.rb:21
+Redirected to http://localhost:3000/tasks
+Completed 200 OK in 13ms (ActiveRecord: 6.8ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2018-09-23 14:49:13 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC[0m
+  ↳ app/views/tasks/index.html.erb:6
+  Rendered tasks/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 35ms (Views: 31.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tasks/new" for 127.0.0.1 at 2018-09-23 14:49:17 -0700
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/_forms.html.erb (2.4ms)
+  Rendered tasks/new.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 40ms (Views: 36.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/tasks" for 127.0.0.1 at 2018-09-23 14:49:31 -0700
+Processing by TasksController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KqAaVGSow5JsSFSltHz30wwpoB3/BTqfrC2LfIe9wHifhloIwFyiXQdtVg9VgHtG7xK4Mga+iWnBy3E1knXkIw==", "task"=>{"action"=>"Laundry ", "description"=>"White and colors load of laundry and folding ", "completion_date"=>"2018-09-24"}, "commit"=>"Create new task"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tasks_controller.rb:21
+  [1m[36mTask Create (5.7ms)[0m  [1m[32mINSERT INTO "tasks" ("action", "description", "created_at", "updated_at", "completion_date", "completed") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["action", "Laundry "], ["description", "White and colors load of laundry and folding "], ["created_at", "2018-09-23 21:49:31.215685"], ["updated_at", "2018-09-23 21:49:31.215685"], ["completion_date", "2018-09-24"], ["completed", false]]
+  ↳ app/controllers/tasks_controller.rb:21
+  [1m[35m (6.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tasks_controller.rb:21
+Redirected to http://localhost:3000/tasks
+Completed 200 OK in 15ms (ActiveRecord: 11.9ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2018-09-23 14:49:31 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC[0m
+  ↳ app/views/tasks/index.html.erb:6
+  Rendered tasks/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 27ms (Views: 23.7ms | ActiveRecord: 0.5ms)
+
+
+  [1m[36mTask Load (0.6ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+Started GET "/tasks" for 127.0.0.1 at 2018-09-23 15:02:23 -0700
+
+SyntaxError - syntax error, unexpected tIDENTIFIER, expecting keyword_end
+...match '/tasks/completed/:id' to: 'tasks#task_compeleted?' as...
+...                             ^~:
+  config/routes.rb:23:in `'
+
+Started POST "/__better_errors/3afa75a8acc86708/variables" for 127.0.0.1 at 2018-09-23 15:02:24 -0700
+Started GET "/tasks" for 127.0.0.1 at 2018-09-23 15:03:01 -0700
+
+SyntaxError - syntax error, unexpected tIDENTIFIER, expecting keyword_end
+...patch '/tasks/completed/:id' to: 'tasks#task_compeleted?' as...
+...                             ^~:
+  config/routes.rb:23:in `'
+
+Started POST "/__better_errors/8dc69f03a835f25f/variables" for 127.0.0.1 at 2018-09-23 15:03:01 -0700
+Started GET "/tasks" for 127.0.0.1 at 2018-09-23 15:03:13 -0700
+
+SyntaxError - syntax error, unexpected tIDENTIFIER, expecting keyword_end
+  patch '/tasks/:id' to: 'tasks#task_compeleted?' as...
+                     ^~:
+  config/routes.rb:23:in `'
+
+Started POST "/__better_errors/f8bf24264b7ca30a/variables" for 127.0.0.1 at 2018-09-23 15:03:13 -0700
+Started GET "/tasks" for 127.0.0.1 at 2018-09-23 15:04:45 -0700
+
+SyntaxError - syntax error, unexpected tIDENTIFIER, expecting keyword_end
+...patch '/tasks/:id/completed' to: 'tasks#task_compeleted?' as...
+...                             ^~:
+  config/routes.rb:23:in `'
+
+Started POST "/__better_errors/c51deba58744ce4e/variables" for 127.0.0.1 at 2018-09-23 15:04:45 -0700
+Started GET "/tasks" for 127.0.0.1 at 2018-09-23 15:04:57 -0700
+
+SyntaxError - syntax error, unexpected tIDENTIFIER, expecting keyword_end
+... post '/tasks/:id/completed' to: 'tasks#task_compeleted?' as...
+...                             ^~:
+  config/routes.rb:23:in `'
+
+Started POST "/__better_errors/6084083dacb67703/variables" for 127.0.0.1 at 2018-09-23 15:04:57 -0700
+Started GET "/tasks" for 127.0.0.1 at 2018-09-23 15:05:35 -0700
+
+SyntaxError - syntax error, unexpected tIDENTIFIER, expecting keyword_end
+... post '/tasks/:id/completed' to: 'tasks#task_compeleted' as:...
+...                             ^~:
+  config/routes.rb:23:in `'
+
+Started POST "/__better_errors/a90c222566051976/variables" for 127.0.0.1 at 2018-09-23 15:05:35 -0700
+Started GET "/tasks" for 127.0.0.1 at 2018-09-23 15:06:14 -0700
+
+SyntaxError - syntax error, unexpected tIDENTIFIER, expecting keyword_end
+... post '/tasks/:id/completed' to: 'tasks#completed' as: 'comp...
+...                             ^~:
+  config/routes.rb:23:in `'
+
+Started POST "/__better_errors/308f87a139d82f32/variables" for 127.0.0.1 at 2018-09-23 15:06:14 -0700
+Started GET "/tasks" for 127.0.0.1 at 2018-09-23 15:06:42 -0700
+
+SyntaxError - syntax error, unexpected tIDENTIFIER, expecting keyword_end
+  post '/tasks/:id/complete' to: 'tasks#complete' as: 'compl...
+                             ^~:
+  config/routes.rb:23:in `'
+
+Started POST "/__better_errors/b7e2e1f38e4049b6/variables" for 127.0.0.1 at 2018-09-23 15:06:42 -0700
+Started GET "/tasks" for 127.0.0.1 at 2018-09-23 15:07:05 -0700
+
+SyntaxError - syntax error, unexpected tIDENTIFIER, expecting keyword_end
+  post '/tasks/:id/complete' to: 'tasks#complete' as: 'compl...
+                             ^~:
+  config/routes.rb:23:in `'
+
+Started POST "/__better_errors/e68f84e4c86d8eac/variables" for 127.0.0.1 at 2018-09-23 15:07:05 -0700
+Started GET "/tasks" for 127.0.0.1 at 2018-09-23 15:14:10 -0700
+
+SyntaxError - syntax error, unexpected tIDENTIFIER, expecting keyword_end
+  patch '/tasks/:id' to: 'tasks#complete' as: 'compl...
+                     ^~:
+  config/routes.rb:23:in `'
+
+Started POST "/__better_errors/f49268418222ac1c/variables" for 127.0.0.1 at 2018-09-23 15:14:10 -0700
+Started GET "/tasks" for 127.0.0.1 at 2018-09-23 15:15:06 -0700
+
+SyntaxError - syntax error, unexpected tIDENTIFIER, expecting keyword_end
+  patch '/tasks/:id' to: 'tasks#complete' as: 'compl...
+                     ^~:
+  config/routes.rb:23:in `'
+
+Started POST "/__better_errors/4e446f20df105f7e/variables" for 127.0.0.1 at 2018-09-23 15:15:06 -0700
+Started GET "/tasks" for 127.0.0.1 at 2018-09-23 15:15:28 -0700
+
+SyntaxError - syntax error, unexpected tIDENTIFIER, expecting keyword_end
+  patch '/tasks/:id' to: 'tasks#complete' as: 'compl...
+                     ^~:
+  config/routes.rb:23:in `'
+
+Started POST "/__better_errors/864d6cee5701e93e/variables" for 127.0.0.1 at 2018-09-23 15:15:28 -0700
+Started GET "/tasks" for 127.0.0.1 at 2018-09-23 15:30:25 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.8ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC[0m
+  ↳ app/views/tasks/index.html.erb:6
+  Rendered tasks/index.html.erb within layouts/application (13.2ms)
+Completed 200 OK in 33ms (Views: 23.6ms | ActiveRecord: 5.3ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2018-09-23 15:30:28 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC[0m
+  ↳ app/views/tasks/index.html.erb:6
+  Rendered tasks/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 29ms (Views: 26.1ms | ActiveRecord: 0.4ms)
+
+
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+Started GET "/tasks" for 127.0.0.1 at 2018-09-23 15:32:53 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC[0m
+  ↳ app/views/tasks/index.html.erb:6
+  Rendered tasks/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 40ms (Views: 35.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/tasks/complete.14" for 127.0.0.1 at 2018-09-23 15:32:55 -0700
+Processing by TasksController#show as 
+  Parameters: {"id"=>"complete"}
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:7
+Completed 404 Not Found in 3ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/tasks/complete.14" for 127.0.0.1 at 2018-09-23 15:33:18 -0700
+Processing by TasksController#show as 
+  Parameters: {"id"=>"complete"}
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:7
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (27.5ms)
+Completed 500 Internal Server Error in 89ms (ActiveRecord: 1.7ms)
+
+
+
+NoMethodError - undefined method `action' for nil:NilClass:
+  app/views/tasks/show.html.erb:5:in `_app_views_tasks_show_html_erb__1696056029752709221_70236776917920'
+
+Started POST "/__better_errors/e4256788acd04ddd/variables" for 127.0.0.1 at 2018-09-23 15:33:19 -0700
+Started GET "/tasks/complete.14" for 127.0.0.1 at 2018-09-23 15:34:50 -0700
+Processing by TasksController#show as 
+  Parameters: {"id"=>"complete"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:7
+Completed 404 Not Found in 5ms (ActiveRecord: 1.8ms)
+
+
+Started GET "/tasks/complete.14" for 127.0.0.1 at 2018-09-23 15:35:30 -0700
+Processing by TasksController#show as 
+  Parameters: {"id"=>"complete"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:7
+Completed 404 Not Found in 5ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2018-09-23 15:35:35 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC[0m
+  ↳ app/views/tasks/index.html.erb:6
+  Rendered tasks/index.html.erb within layouts/application (189.8ms)
+Completed 500 Internal Server Error in 198ms (ActiveRecord: 2.2ms)
+
+
+
+NoMethodError - undefined method `complete_task_path' for #<#<Class:0x00007fc28c281d00>:0x00007fc28c26a510>
+Did you mean?  compute_asset_path:
+  app/views/tasks/index.html.erb:9:in `block in _app_views_tasks_index_html_erb__3781230279937660668_70236775914260'
+  app/views/tasks/index.html.erb:6:in `_app_views_tasks_index_html_erb__3781230279937660668_70236775914260'
+
+Started POST "/__better_errors/a817514e5b1bdb9f/variables" for 127.0.0.1 at 2018-09-23 15:35:35 -0700
+Started GET "/tasks" for 127.0.0.1 at 2018-09-23 15:37:20 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC[0m
+  ↳ app/views/tasks/index.html.erb:6
+  Rendered tasks/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 32ms (Views: 28.2ms | ActiveRecord: 0.5ms)
+
+
+Started PATCH "/tasks/14" for 127.0.0.1 at 2018-09-23 15:37:22 -0700
+Processing by TasksController#update as HTML
+  Parameters: {"authenticity_token"=>"kAB3o4jA8sQpzU2ZIPVGMfOgDPQb0o/ID7pp+qWILYvyLMkBiVQ00cxIWg8Ajk1GaCbk3owcaeKL+4sgVgstPA==", "id"=>"14"}
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:34
+Completed 400 Bad Request in 2ms (ActiveRecord: 0.3ms)
+
+
+
+ActionController::ParameterMissing - param is missing or the value is empty: task:
+  app/controllers/tasks_controller.rb:68:in `task_params'
+  app/controllers/tasks_controller.rb:36:in `update'
+
+Started POST "/__better_errors/db0a3b6226030525/variables" for 127.0.0.1 at 2018-09-23 15:37:22 -0700
+Started GET "/tasks/14" for 127.0.0.1 at 2018-09-23 15:37:45 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:7
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 33ms (Views: 18.8ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/tasks/1" for 127.0.0.1 at 2018-09-23 15:37:51 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:7
+Completed 404 Not Found in 2ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2018-09-23 15:37:52 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC[0m
+  ↳ app/views/tasks/index.html.erb:6
+  Rendered tasks/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 24ms (Views: 21.3ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/tasks/14" for 127.0.0.1 at 2018-09-23 15:38:10 -0700
+Processing by TasksController#update as HTML
+  Parameters: {"authenticity_token"=>"vPFv4IQhvLc2yvn3yP867Wuv/ayhItaJMG16USuEORLe3dFChbV6otNP7mHohDGa8CkVhjbsMKO0LJiL2Ac5pQ==", "id"=>"14"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:34
+Completed 400 Bad Request in 2ms (ActiveRecord: 0.2ms)
+
+
+
+ActionController::ParameterMissing - param is missing or the value is empty: task:
+  app/controllers/tasks_controller.rb:68:in `task_params'
+  app/controllers/tasks_controller.rb:36:in `update'
+
+Started POST "/__better_errors/b12be0e1c22b7e9f/variables" for 127.0.0.1 at 2018-09-23 15:38:11 -0700
+Started POST "/__better_errors/b12be0e1c22b7e9f/variables" for 127.0.0.1 at 2018-09-23 15:38:11 -0700
+Started GET "/tasks/14" for 127.0.0.1 at 2018-09-23 15:39:11 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:7
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 24ms (Views: 20.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/14" for 127.0.0.1 at 2018-09-23 15:39:14 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:7
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 23ms (Views: 19.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2018-09-23 15:39:17 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC[0m
+  ↳ app/views/tasks/index.html.erb:6
+  Rendered tasks/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 24ms (Views: 20.9ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/tasks/14" for 127.0.0.1 at 2018-09-23 15:39:34 -0700
+Processing by TasksController#update as HTML
+  Parameters: {"authenticity_token"=>"Apgwj6/bZM32Y0UGvV1SkbvAcGBOkrclB7LN8skiGKhgtI4trk+i2BPmUpCdJlnmIEaYStlcUQ+D8y8oOqEYHw==", "id"=>"14"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:34
+Completed 400 Bad Request in 2ms (ActiveRecord: 0.2ms)
+
+
+
+ActionController::ParameterMissing - param is missing or the value is empty: task:
+  app/controllers/tasks_controller.rb:68:in `task_params'
+  app/controllers/tasks_controller.rb:36:in `update'
+
+Started POST "/__better_errors/65fe4da69c3f2f13/variables" for 127.0.0.1 at 2018-09-23 15:39:34 -0700
+Started GET "/tasks/" for 127.0.0.1 at 2018-09-23 15:39:52 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC[0m
+  ↳ app/views/tasks/index.html.erb:6
+  Rendered tasks/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 26ms (Views: 23.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tasks/" for 127.0.0.1 at 2018-09-23 15:41:37 -0700
+
+SyntaxError - syntax error, unexpected tIDENTIFIER, expecting keyword_end
+...plete', as: "complete_task" via: :put
+...                            ^~~:
+  config/routes.rb:25:in `'
+
+Started POST "/__better_errors/ded59e15e988533f/variables" for 127.0.0.1 at 2018-09-23 15:41:37 -0700
+Started GET "/tasks/" for 127.0.0.1 at 2018-09-23 15:42:30 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC[0m
+  ↳ app/views/tasks/index.html.erb:6
+  Rendered tasks/index.html.erb within layouts/application (11.2ms)
+Completed 200 OK in 33ms (Views: 26.9ms | ActiveRecord: 3.1ms)
+
+
+Started PATCH "/tasks/complete.14" for 127.0.0.1 at 2018-09-23 15:42:31 -0700
+Processing by TasksController#update as 
+  Parameters: {"authenticity_token"=>"dNejEW8pnwcmQ++KFNyEAHxvaVlTlRXh6C/b/AcUFmwW+x2zbr1ZEsPG+Bw0p4935+mBc8Rb88tsbjkm9JcW2w==", "id"=>"complete"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:34
+Completed 400 Bad Request in 2ms (ActiveRecord: 0.2ms)
+
+
+
+ActionController::ParameterMissing - param is missing or the value is empty: task:
+  app/controllers/tasks_controller.rb:68:in `task_params'
+  app/controllers/tasks_controller.rb:36:in `update'
+
+Started POST "/__better_errors/3bdcf8045c327616/variables" for 127.0.0.1 at 2018-09-23 15:42:31 -0700
+Started GET "/tasks/complete.14" for 127.0.0.1 at 2018-09-23 15:43:31 -0700
+Processing by TasksController#show as 
+  Parameters: {"id"=>"complete"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:7
+Completed 404 Not Found in 5ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/tasks/" for 127.0.0.1 at 2018-09-23 15:43:36 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC[0m
+  ↳ app/views/tasks/index.html.erb:6
+  Rendered tasks/index.html.erb within layouts/application (9.6ms)
+Completed 200 OK in 30ms (Views: 25.6ms | ActiveRecord: 2.2ms)
+
+
+Started PATCH "/tasks/complete.14" for 127.0.0.1 at 2018-09-23 15:43:38 -0700
+Processing by TasksController#update as 
+  Parameters: {"authenticity_token"=>"ROA5+pYKTOsi9rxw443ovgiuOAxNQwGQtVTw0nWVWLAmzIdYl56K/sdzq+bD9uPJkyjQJtqN57oxFRIIhhZYBw==", "id"=>"complete"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:34
+Completed 400 Bad Request in 2ms (ActiveRecord: 0.2ms)
+
+
+
+ActionController::ParameterMissing - param is missing or the value is empty: task:
+  app/controllers/tasks_controller.rb:68:in `task_params'
+  app/controllers/tasks_controller.rb:36:in `update'
+
+Started POST "/__better_errors/f6af0bb01d83a589/variables" for 127.0.0.1 at 2018-09-23 15:43:38 -0700
+Started GET "/tasks/complete.14" for 127.0.0.1 at 2018-09-23 15:45:27 -0700
+Processing by TasksController#show as 
+  Parameters: {"id"=>"complete"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:7
+Completed 404 Not Found in 4ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/tasks/" for 127.0.0.1 at 2018-09-23 15:45:32 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC[0m
+  ↳ app/views/tasks/index.html.erb:6
+  Rendered tasks/index.html.erb within layouts/application (10.1ms)
+Completed 200 OK in 30ms (Views: 25.8ms | ActiveRecord: 2.1ms)
+
+
+Started PATCH "/tasks/complete.14" for 127.0.0.1 at 2018-09-23 15:45:33 -0700
+Processing by TasksController#update as 
+  Parameters: {"authenticity_token"=>"Gz9qp6lY5d2TCR9ti10VnRlRvgAwe2I+bbVySEEqr1x5E9QFqMwjyHaMCPurJh7qgtdWKqe1hBTp9JCSsqmv6w==", "id"=>"complete"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:34
+Unpermitted parameters: :_method, :authenticity_token, :id, :format
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.2ms)
+
+
+
+NoMethodError - undefined method `update' for nil:NilClass:
+  app/controllers/tasks_controller.rb:38:in `update'
+
+Started POST "/__better_errors/d8379ac16dce8237/variables" for 127.0.0.1 at 2018-09-23 15:45:33 -0700
+Started GET "/tasks/" for 127.0.0.1 at 2018-09-23 15:57:45 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.7ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC[0m
+  ↳ app/views/tasks/index.html.erb:6
+  Rendered tasks/index.html.erb within layouts/application (12.7ms)
+Completed 200 OK in 33ms (Views: 24.1ms | ActiveRecord: 5.1ms)
+
+
+Started PATCH "/tasks/complete.14" for 127.0.0.1 at 2018-09-23 15:57:47 -0700
+Processing by TasksController#update as 
+  Parameters: {"authenticity_token"=>"GqSHZ2RokqcH26MEeqUwM47tJQbLZprmnXhFdo8Z23B4iDnFZfxUsuJetJJa3jtEFWvNLFyofMwZOaesfJrbxw==", "id"=>"complete"}
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:34
+Completed 400 Bad Request in 3ms (ActiveRecord: 0.6ms)
+
+
+
+ActionController::ParameterMissing - param is missing or the value is empty: task:
+  app/controllers/tasks_controller.rb:68:in `task_params'
+  app/controllers/tasks_controller.rb:36:in `update'
+
+Started POST "/__better_errors/5889a6ea1eba2ff7/variables" for 127.0.0.1 at 2018-09-23 15:57:47 -0700
+Started GET "/tasks/" for 127.0.0.1 at 2018-09-23 15:58:15 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC[0m
+  ↳ app/views/tasks/index.html.erb:6
+  Rendered tasks/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 30ms (Views: 27.2ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/tasks/complete.14" for 127.0.0.1 at 2018-09-23 15:58:17 -0700
+Processing by TasksController#complete as 
+  Parameters: {"authenticity_token"=>"Nushfeo7nKo8tT2RyCoOsJz52fTM0eultuy5h4qqBaFUx5/f669av9kwKgfoUQXHB38x3lsfDY8yrVtdeSkFFg=="}
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:56
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.4ms)
+
+
+
+NoMethodError - undefined method `completed' for nil:NilClass:
+  app/controllers/tasks_controller.rb:57:in `complete'
+
+Started POST "/__better_errors/b0f96a4340930830/variables" for 127.0.0.1 at 2018-09-23 15:58:17 -0700
+Started GET "/tasks/" for 127.0.0.1 at 2018-09-23 15:59:49 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC[0m
+  ↳ app/views/tasks/index.html.erb:6
+  Rendered tasks/index.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 40ms (Views: 33.5ms | ActiveRecord: 2.9ms)
+
+
+Started POST "/tasks/complete.14" for 127.0.0.1 at 2018-09-23 15:59:51 -0700
+Processing by TasksController#complete as 
+  Parameters: {"authenticity_token"=>"GQ5H7sbNYTOEHVaRDuPAQq2HXs+kKaBQ+AyP9oeaX0N7IvlMx1mnJmGYQQcumMs1NgG25TPnRnp8TW0sdBlf9A=="}
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:56
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.5ms)
+
+
+
+NoMethodError - undefined method `update_attribute' for nil:NilClass:
+  app/controllers/tasks_controller.rb:57:in `complete'
+
+Started POST "/__better_errors/153d80e5d7bb088d/variables" for 127.0.0.1 at 2018-09-23 15:59:51 -0700
+Started GET "/tasks/" for 127.0.0.1 at 2018-09-23 16:00:07 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC[0m
+  ↳ app/views/tasks/index.html.erb:6
+  Rendered tasks/index.html.erb within layouts/application (11.3ms)
+Completed 200 OK in 35ms (Views: 28.5ms | ActiveRecord: 3.0ms)
+
+
+Started POST "/tasks/complete.14" for 127.0.0.1 at 2018-09-23 16:00:09 -0700
+Processing by TasksController#complete as 
+  Parameters: {"authenticity_token"=>"vo0p2Fdb7LZCC7DbLt+Qm0oUTXsHldo/R5U5YySr9UncoZd6Vs8qo6eOp00OpJvs0ZKlUZBbPBXD1Nu51yj1/g=="}
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:56
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.4ms)
+
+
+
+NoMethodError - undefined method `update' for nil:NilClass:
+  app/controllers/tasks_controller.rb:57:in `complete'
+
+Started POST "/__better_errors/cee526772c4c6677/variables" for 127.0.0.1 at 2018-09-23 16:00:09 -0700
+Started GET "/tasks/" for 127.0.0.1 at 2018-09-23 16:04:17 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC[0m
+  ↳ app/views/tasks/index.html.erb:6
+  Rendered tasks/index.html.erb within layouts/application (11.1ms)
+Completed 200 OK in 44ms (Views: 37.0ms | ActiveRecord: 3.5ms)
+
+
+Started PUT "/tasks/complete.14" for 127.0.0.1 at 2018-09-23 16:04:19 -0700
+Processing by TasksController#update as 
+  Parameters: {"authenticity_token"=>"CPHmfYabrNg/VV4JxEw84Tb/3BSyxCxxfEXodyFlZgVq3Vjfhw9qzdrQSZ/kNzeWrXk0PiUKylv4BAqt0uZmsg==", "id"=>"complete"}
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:34
+Completed 400 Bad Request in 3ms (ActiveRecord: 0.4ms)
+
+
+
+ActionController::ParameterMissing - param is missing or the value is empty: task:
+  app/controllers/tasks_controller.rb:64:in `task_params'
+  app/controllers/tasks_controller.rb:36:in `update'
+
+Started POST "/__better_errors/c3ce27652308a422/variables" for 127.0.0.1 at 2018-09-23 16:04:19 -0700
+Started GET "/tasks/" for 127.0.0.1 at 2018-09-23 16:05:05 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC[0m
+  ↳ app/views/tasks/index.html.erb:6
+  Rendered tasks/index.html.erb within layouts/application (16.8ms)
+Completed 200 OK in 40ms (Views: 33.7ms | ActiveRecord: 3.2ms)
+
+
+Started PUT "/tasks/complete.15" for 127.0.0.1 at 2018-09-23 16:05:07 -0700
+Processing by TasksController#update as 
+  Parameters: {"authenticity_token"=>"b3F7FacVxH1rSJgmdFYmxlC+r7xNZOY8ZUjZdSeh2sENXcW3poECaI7Nj7BULS2xyzhHltqqABbhCTuv1CLadg==", "id"=>"complete"}
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:34
+Completed 400 Bad Request in 3ms (ActiveRecord: 0.4ms)
+
+
+
+ActionController::ParameterMissing - param is missing or the value is empty: task:
+  app/controllers/tasks_controller.rb:64:in `task_params'
+  app/controllers/tasks_controller.rb:36:in `update'
+
+Started POST "/__better_errors/904098b581e4e7cb/variables" for 127.0.0.1 at 2018-09-23 16:05:07 -0700
+Started GET "/tasks/" for 127.0.0.1 at 2018-09-23 16:39:56 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.8ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC[0m
+  ↳ app/views/tasks/index.html.erb:6
+  Rendered tasks/index.html.erb within layouts/application (12.6ms)
+Completed 200 OK in 31ms (Views: 22.1ms | ActiveRecord: 6.0ms)
+
+
+Started PATCH "/tasks/14/complete" for 127.0.0.1 at 2018-09-23 16:40:01 -0700
+
+NameError - uninitialized constant TaskController:
+
+Started POST "/__better_errors/524586d75e981831/variables" for 127.0.0.1 at 2018-09-23 16:40:01 -0700
+Started GET "/tasks/1" for 127.0.0.1 at 2018-09-23 16:42:17 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:7
+Completed 404 Not Found in 6ms (ActiveRecord: 2.1ms)
+
+
+Started GET "/tasks/" for 127.0.0.1 at 2018-09-23 16:42:18 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC[0m
+  ↳ app/views/tasks/index.html.erb:6
+  Rendered tasks/index.html.erb within layouts/application (10.4ms)
+Completed 200 OK in 39ms (Views: 29.2ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/tasks/" for 127.0.0.1 at 2018-09-23 16:42:44 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC[0m
+  ↳ app/views/tasks/index.html.erb:6
+  Rendered tasks/index.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 34ms (Views: 27.3ms | ActiveRecord: 3.3ms)
+
+
+Started PATCH "/tasks/14/complete" for 127.0.0.1 at 2018-09-23 16:42:47 -0700
+
+NameError - uninitialized constant TaskController:
+
+Started POST "/__better_errors/22e35ce972e11775/variables" for 127.0.0.1 at 2018-09-23 16:42:47 -0700
+Started GET "/tasks/" for 127.0.0.1 at 2018-09-23 16:43:13 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC[0m
+  ↳ app/views/tasks/index.html.erb:6
+  Rendered tasks/index.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 30ms (Views: 26.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/tasks/14/edit" for 127.0.0.1 at 2018-09-23 16:43:14 -0700
+Processing by TasksController#edit as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:29
+  Rendering tasks/edit.html.erb within layouts/application
+  Rendered tasks/edit.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 39ms (Views: 34.0ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/tasks/14" for 127.0.0.1 at 2018-09-23 16:43:19 -0700
+Processing by TasksController#update as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/cZ6r7PgyQv1d/QVAAYf9xwatBMnXw5LEEmokTE6Seepy8kRi7cF6L2oROaLE6fHhAmoXum5zMxZHZdrFcZu4Q==", "task"=>{"action"=>"CS Fun HW2", "description"=>"Some reading and reverse sentence hw and some more reading ", "completion_date"=>"2018-09-25"}, "commit"=>"Update Task", "id"=>"14"}
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:34
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tasks_controller.rb:38
+  [1m[36mTask Update (0.6ms)[0m  [1m[33mUPDATE "tasks" SET "action" = $1, "updated_at" = $2 WHERE "tasks"."id" = $3[0m  [["action", "CS Fun HW2"], ["updated_at", "2018-09-23 23:43:19.403825"], ["id", 14]]
+  ↳ app/controllers/tasks_controller.rb:38
+  [1m[35m (5.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tasks_controller.rb:38
+Redirected to http://localhost:3000/tasks/14
+Completed 200 OK in 14ms (ActiveRecord: 7.3ms)
+
+
+Started GET "/tasks/14" for 127.0.0.1 at 2018-09-23 16:43:19 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mTask Load (0.8ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:7
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 37ms (Views: 32.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2018-09-23 16:43:22 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC[0m
+  ↳ app/views/tasks/index.html.erb:6
+  Rendered tasks/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 22ms (Views: 19.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2018-09-23 16:43:57 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC[0m
+  ↳ app/views/tasks/index.html.erb:6
+  Rendered tasks/index.html.erb within layouts/application (12.2ms)
+Completed 200 OK in 39ms (Views: 30.4ms | ActiveRecord: 3.6ms)
+
+
+Started PATCH "/tasks/14/complete" for 127.0.0.1 at 2018-09-23 16:43:59 -0700
+
+NameError - uninitialized constant TaskController:
+
+Started POST "/__better_errors/1047f86c976c472f/variables" for 127.0.0.1 at 2018-09-23 16:43:59 -0700
+Started GET "/tasks/" for 127.0.0.1 at 2018-09-23 16:45:22 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC[0m
+  ↳ app/views/tasks/index.html.erb:6
+  Rendered tasks/index.html.erb within layouts/application (11.2ms)
+Completed 200 OK in 36ms (Views: 28.4ms | ActiveRecord: 3.2ms)
+
+
+Started PATCH "/tasks/14/complete" for 127.0.0.1 at 2018-09-23 16:45:35 -0700
+
+NameError - uninitialized constant TaskController:
+
+Started POST "/__better_errors/656796a9a775e728/variables" for 127.0.0.1 at 2018-09-23 16:45:35 -0700
+Started GET "/tasks/1" for 127.0.0.1 at 2018-09-23 16:49:02 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:7
+Completed 404 Not Found in 7ms (ActiveRecord: 2.2ms)
+
+
+Started GET "/tasks/" for 127.0.0.1 at 2018-09-23 16:49:03 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC[0m
+  ↳ app/views/tasks/index.html.erb:6
+  Rendered tasks/index.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 38ms (Views: 31.7ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/tasks/new" for 127.0.0.1 at 2018-09-23 16:49:06 -0700
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/_forms.html.erb (2.7ms)
+  Rendered tasks/new.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 41ms (Views: 38.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/tasks" for 127.0.0.1 at 2018-09-23 16:49:20 -0700
+Processing by TasksController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"73eCOwDlQljfVnxKSfMszHyfG1U2ZpHWtzQEKkZc0iFaUcJnpBEjl7RzfuCoD6BZn6QDes/dIiDa0v5jU5T2eg==", "task"=>{"action"=>"Essay", "description"=>"Write a 5 page essay about Kim Swift", "completion_date"=>"2018-09-30"}, "commit"=>"Create new task"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tasks_controller.rb:21
+  [1m[36mTask Create (0.5ms)[0m  [1m[32mINSERT INTO "tasks" ("action", "description", "created_at", "updated_at", "completion_date", "completed") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["action", "Essay"], ["description", "Write a 5 page essay about Kim Swift"], ["created_at", "2018-09-23 23:49:20.419536"], ["updated_at", "2018-09-23 23:49:20.419536"], ["completion_date", "2018-09-30"], ["completed", false]]
+  ↳ app/controllers/tasks_controller.rb:21
+  [1m[35m (6.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tasks_controller.rb:21
+Redirected to http://localhost:3000/tasks
+Completed 200 OK in 10ms (ActiveRecord: 6.9ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2018-09-23 16:49:20 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC[0m
+  ↳ app/views/tasks/index.html.erb:6
+  Rendered tasks/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 39ms (Views: 35.2ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/tasks/14/complete" for 127.0.0.1 at 2018-09-23 16:49:53 -0700
+  
+ActionController::RoutingError (No route matches [PATCH] "/tasks/14/complete"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/tasks/" for 127.0.0.1 at 2018-09-23 16:51:20 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC[0m
+  ↳ app/views/tasks/index.html.erb:6
+  Rendered tasks/index.html.erb within layouts/application (11.1ms)
+Completed 200 OK in 33ms (Views: 26.0ms | ActiveRecord: 3.2ms)
+
+
+Started PATCH "/tasks/15/complete" for 127.0.0.1 at 2018-09-23 16:51:22 -0700
+
+NameError - uninitialized constant TaskController:
+
+Started POST "/__better_errors/9ad56cdc18e2bbdb/variables" for 127.0.0.1 at 2018-09-23 16:51:22 -0700
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Started GET "/tasks/" for 127.0.0.1 at 2018-09-23 16:55:07 -0700
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/semretnicodimos/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.6ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC[0m
+  ↳ app/views/tasks/index.html.erb:6
+  Rendered tasks/index.html.erb within layouts/application (16.4ms)
+Completed 200 OK in 295ms (Views: 281.4ms | ActiveRecord: 4.0ms)
+
+
+Started PATCH "/tasks/14/complete" for 127.0.0.1 at 2018-09-23 16:55:11 -0700
+
+NameError - uninitialized constant TaskController:
+
+Started POST "/__better_errors/3fbdc615f99cd78e/variables" for 127.0.0.1 at 2018-09-23 16:55:12 -0700
+Started GET "/tasks/1" for 127.0.0.1 at 2018-09-23 16:55:59 -0700
+Started GET "/tasks/" for 127.0.0.1 at 2018-09-23 16:56:09 -0700
+Started GET "/tasks/" for 127.0.0.1 at 2018-09-23 16:56:09 -0700
+Started GET "/tasks/" for 127.0.0.1 at 2018-09-23 16:56:09 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTask Load (0.6ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:7
+Completed 404 Not Found in 10ms (ActiveRecord: 4.4ms)
+
+
+Processing by TasksController#index as HTML
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (5.7ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC[0m
+  ↳ app/views/tasks/index.html.erb:6
+  Rendered tasks/index.html.erb within layouts/application (15.3ms)
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.7ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC[0m
+  ↳ app/views/tasks/index.html.erb:6
+  Rendered tasks/index.html.erb within layouts/application (3.5ms)
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (2.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC[0m
+  ↳ app/views/tasks/index.html.erb:6
+  Rendered tasks/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 94ms (Views: 82.9ms | ActiveRecord: 5.7ms)
+
+
+Completed 200 OK in 114ms (Views: 101.3ms | ActiveRecord: 0.7ms)
+
+
+Completed 200 OK in 79ms (Views: 72.7ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/tasks/" for 127.0.0.1 at 2018-09-23 16:56:13 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC[0m
+  ↳ app/views/tasks/index.html.erb:6
+  Rendered tasks/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 28ms (Views: 24.8ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/tasks/14/complete" for 127.0.0.1 at 2018-09-23 16:56:15 -0700
+Processing by TasksController#complete as HTML
+  Parameters: {"authenticity_token"=>"9WmKol92bmiAF6bvqFOaU2zkV/KichDSXqmNAc/BdIaXRTQAXuKofWWSsXmIKJEk92K/2DW89vja6G/bPEJ0MQ==", "id"=>"14"}
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:56
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tasks_controller.rb:57
+  [1m[36mTask Update (0.5ms)[0m  [1m[33mUPDATE "tasks" SET "completed" = $1, "updated_at" = $2 WHERE "tasks"."id" = $3[0m  [["completed", true], ["updated_at", "2018-09-23 23:56:15.354462"], ["id", 14]]
+  ↳ app/controllers/tasks_controller.rb:57
+  [1m[35m (5.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tasks_controller.rb:57
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tasks_controller.rb:58
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tasks_controller.rb:58
+Redirected to http://localhost:3000/tasks
+Completed 302 Found in 13ms (ActiveRecord: 6.9ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2018-09-23 16:56:15 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC[0m
+  ↳ app/views/tasks/index.html.erb:6
+  Rendered tasks/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 25ms (Views: 21.9ms | ActiveRecord: 0.4ms)
+
+
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+Started GET "/tasks" for 127.0.0.1 at 2018-09-23 17:15:09 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (1.5ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC[0m
+  ↳ app/views/tasks/index.html.erb:6
+  Rendered tasks/index.html.erb within layouts/application (20.6ms)
+Completed 200 OK in 60ms (Views: 47.9ms | ActiveRecord: 7.6ms)
+
+
+Started PATCH "/tasks/14/complete" for 127.0.0.1 at 2018-09-23 17:15:34 -0700
+Processing by TasksController#complete as HTML
+  Parameters: {"authenticity_token"=>"wZepBBaPiZJ+QFDjxPBeL5ZUD+9RaCr3gJ5eReSNiU2juxemFxtPh5vFR3Xki1VYDdLnxcamzN0E37yfFw6J+g==", "id"=>"14"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:56
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tasks_controller.rb:57
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tasks_controller.rb:57
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tasks_controller.rb:58
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tasks_controller.rb:58
+Redirected to http://localhost:3000/tasks
+Completed 302 Found in 7ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2018-09-23 17:15:34 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC[0m
+  ↳ app/views/tasks/index.html.erb:6
+  Rendered tasks/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 32ms (Views: 29.2ms | ActiveRecord: 0.4ms)
+
+
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+Started GET "/tasks" for 127.0.0.1 at 2018-09-23 17:26:31 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (1.4ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms)
+
+
+
+SyntaxError - syntax error, unexpected tIDENTIFIER, expecting keyword_then or ';' or '\n'
+...task.completed == false link_to "Mark completed", complete_t...
+...                        ^~~~~~~
+/Users/semretnicodimos/Documents/Ada_C10/Projects/TaskList/app/views/tasks/index.html.erb:12: syntax error, unexpected keyword_else, expecting ')'
+      else
+      ^~~~:
+  app/views/tasks/index.html.erb:11:in `'
+
+Started POST "/__better_errors/2bb2e579c377bf48/variables" for 127.0.0.1 at 2018-09-23 17:26:31 -0700
+  [1m[36mTask Load (0.8ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Started GET "/tasks" for 127.0.0.1 at 2018-09-23 17:44:15 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (1.6ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms)
+
+
+
+SyntaxError - syntax error, unexpected tIDENTIFIER, expecting keyword_then or ';' or '\n'
+...task.completed == false link_to "Mark completed", complete_t...
+...                        ^~~~~~~
+/Users/semretnicodimos/Documents/Ada_C10/Projects/TaskList/app/views/tasks/index.html.erb:12: syntax error, unexpected keyword_else, expecting ')'
+      else
+      ^~~~:
+  app/views/tasks/index.html.erb:11:in `'
+
+Started POST "/__better_errors/ddd85001d76970d2/variables" for 127.0.0.1 at 2018-09-23 17:44:15 -0700
+  [1m[36mTask Load (0.9ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Started GET "/tasks" for 127.0.0.1 at 2018-09-23 17:44:38 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms)
+
+
+
+SyntaxError - syntax error, unexpected tIDENTIFIER, expecting keyword_then or ';' or '\n'
+...task.completed == false link_to "Mark completed", complete_t...
+...                        ^~~~~~~
+/Users/semretnicodimos/Documents/Ada_C10/Projects/TaskList/app/views/tasks/index.html.erb:12: syntax error, unexpected keyword_else, expecting ')'
+      else
+      ^~~~
+/Users/semretnicodimos/Documents/Ada_C10/Projects/TaskList/app/views/tasks/index.html.erb:14: syntax error, unexpected keyword_end, expecting ')'
+      end
+      ^~~
+/Users/semretnicodimos/Documents/Ada_C10/Projects/TaskList/app/views/tasks/index.html.erb:21: syntax error, unexpected keyword_end, expecting ')'
+'.freeze;    end
+             ^~~
+/Users/semretnicodimos/Documents/Ada_C10/Projects/TaskList/app/views/tasks/index.html.erb:26: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+          ^~~~~~
+/Users/semretnicodimos/Documents/Ada_C10/Projects/TaskList/app/views/tasks/index.html.erb:28: syntax error, unexpected keyword_end, expecting ')'
+          end
+          ^~~:
+  app/views/tasks/index.html.erb:11:in `'
+
+Started POST "/__better_errors/8c280c2f6678e8fb/variables" for 127.0.0.1 at 2018-09-23 17:44:38 -0700
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+Started GET "/tasks" for 127.0.0.1 at 2018-09-23 18:10:36 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms)
+
+
+
+SyntaxError - syntax error, unexpected tIDENTIFIER, expecting keyword_then or ';' or '\n'
+...task.completed == false link_to "Mark completed", complete_t...
+...                        ^~~~~~~
+/Users/semretnicodimos/Documents/Ada_C10/Projects/TaskList/app/views/tasks/index.html.erb:12: syntax error, unexpected keyword_else, expecting ')'
+      else
+      ^~~~
+/Users/semretnicodimos/Documents/Ada_C10/Projects/TaskList/app/views/tasks/index.html.erb:14: syntax error, unexpected keyword_end, expecting ')'
+      end
+      ^~~
+/Users/semretnicodimos/Documents/Ada_C10/Projects/TaskList/app/views/tasks/index.html.erb:17: syntax error, unexpected tIDENTIFIER, expecting ')'
+...rk Complete" complete_task_path(task.id), method: :patch );@...
+...             ^~~~~~~~~~~~~~~~~~
+/Users/semretnicodimos/Documents/Ada_C10/Projects/TaskList/app/views/tasks/index.html.erb:17: syntax error, unexpected ',', expecting ')'
+...e" complete_task_path(task.id), method: :patch );@output_buf...
+...                              ^
+/Users/semretnicodimos/Documents/Ada_C10/Projects/TaskList/app/views/tasks/index.html.erb:23: syntax error, unexpected keyword_end, expecting ')'
+'.freeze;    end
+             ^~~
+/Users/semretnicodimos/Documents/Ada_C10/Projects/TaskList/app/views/tasks/index.html.erb:28: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+          ^~~~~~
+/Users/semretnicodimos/Documents/Ada_C10/Projects/TaskList/app/views/tasks/index.html.erb:30: syntax error, unexpected keyword_end, expecting ')'
+          end
+          ^~~:
+  app/views/tasks/index.html.erb:11:in `'
+
+Started POST "/__better_errors/029d32238839e900/variables" for 127.0.0.1 at 2018-09-23 18:10:36 -0700
+  [1m[36mTask Load (0.8ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Started GET "/tasks" for 127.0.0.1 at 2018-09-23 18:10:47 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms)
+
+
+
+SyntaxError - syntax error, unexpected tIDENTIFIER, expecting ')'
+...rk Complete" complete_task_path(task.id), method: :patch );@...
+...             ^~~~~~~~~~~~~~~~~~
+/Users/semretnicodimos/Documents/Ada_C10/Projects/TaskList/app/views/tasks/index.html.erb:10: syntax error, unexpected ',', expecting ')'
+...e" complete_task_path(task.id), method: :patch );@output_buf...
+...                              ^:
+  app/views/tasks/index.html.erb:10:in `'
+
+Started POST "/__better_errors/b586bc557a26a932/variables" for 127.0.0.1 at 2018-09-23 18:10:47 -0700
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/semretnicodimos/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Started GET "/tasks" for 127.0.0.1 at 2018-09-23 18:11:03 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC[0m
+  ↳ app/views/tasks/index.html.erb:6
+  Rendered tasks/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 24ms (Views: 21.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tasks/14" for 127.0.0.1 at 2018-09-23 18:12:03 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:7
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 33ms (Views: 27.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/tasks/14" for 127.0.0.1 at 2018-09-23 18:13:48 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:7
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 35ms (Views: 30.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2018-09-23 18:17:03 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.6ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC[0m
+  ↳ app/views/tasks/index.html.erb:6
+  Rendered tasks/index.html.erb within layouts/application (21.2ms)
+Completed 200 OK in 47ms (Views: 36.9ms | ActiveRecord: 6.2ms)
+
+
+Started PATCH "/tasks/14/complete" for 127.0.0.1 at 2018-09-23 18:17:04 -0700
+Processing by TasksController#complete as HTML
+  Parameters: {"authenticity_token"=>"UHxEgnVTOZ/IpMlvV4sgaCxDtpAmKCOf0KyHj1Aa0BkyUPogdMf/ii0h3vl38Csft8VeurHmxbVU7WVVo5nQrg==", "id"=>"14"}
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:56
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tasks_controller.rb:60
+  [1m[36mTask Update (0.6ms)[0m  [1m[33mUPDATE "tasks" SET "completed" = $1, "updated_at" = $2 WHERE "tasks"."id" = $3[0m  [["completed", false], ["updated_at", "2018-09-24 01:17:04.533621"], ["id", 14]]
+  ↳ app/controllers/tasks_controller.rb:60
+  [1m[35m (5.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tasks_controller.rb:60
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tasks_controller.rb:62
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tasks_controller.rb:62
+Redirected to http://localhost:3000/tasks
+Completed 302 Found in 13ms (ActiveRecord: 7.1ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2018-09-23 18:17:04 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC[0m
+  ↳ app/views/tasks/index.html.erb:6
+  Rendered tasks/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 33ms (Views: 30.6ms | ActiveRecord: 0.4ms)
+
+
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+Started PATCH "/tasks/15/complete" for 127.0.0.1 at 2018-09-23 18:19:23 -0700
+Processing by TasksController#complete as HTML
+  Parameters: {"authenticity_token"=>"WPYRoTd19wBVQuHBPlTo9nhFzI9QaT5hbArwGwZjtpE62q8DNuExFbDH9lceL+OB48Mkpcen2EvoSxLB9eC2Jg==", "id"=>"15"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:56
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tasks_controller.rb:58
+  [1m[36mTask Update (0.5ms)[0m  [1m[33mUPDATE "tasks" SET "completed" = $1, "updated_at" = $2 WHERE "tasks"."id" = $3[0m  [["completed", true], ["updated_at", "2018-09-24 01:19:23.804145"], ["id", 15]]
+  ↳ app/controllers/tasks_controller.rb:58
+  [1m[35m (6.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tasks_controller.rb:58
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/tasks_controller.rb:62
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/tasks_controller.rb:62
+Redirected to http://localhost:3000/tasks
+Completed 302 Found in 24ms (ActiveRecord: 10.3ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2018-09-23 18:19:23 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC[0m
+  ↳ app/views/tasks/index.html.erb:6
+  Rendered tasks/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 23ms (Views: 20.2ms | ActiveRecord: 0.3ms)
+
+
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]

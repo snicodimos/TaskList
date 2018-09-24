@@ -1,19 +1,29 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title> My TaskList</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
+<head>
+  <title> My TaskList</title>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+</head>
 
-  <body>
-    <%= yield %>
+<body>
+  <nav class="side_buttons">
+    <button id="add_new">
+      <a href="/tasks/new">Add Task</a>
+    </button>
 
-    <div class="footer">
-      &copy 2018, SNN Incorporated.
-    </div>
-  </body>
+    <button id="all_tasks">
+      <a href="/tasks">All Tasks</a>
+    </button>
+  </nav>
+
+  <%= yield %>
+
+  <div class="footer">
+    &copy 2018, SNN Incorporated.
+  </div>
+</body>
 </html>

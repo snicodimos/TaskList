@@ -20,4 +20,7 @@ Rails.application.routes.draw do
 
   resources :tasks
 
+  # patch '/tasks/:id' to: 'tasks#complete' as: 'complete_task'
+
+  patch '/tasks/:id/complete', to: 'tasks#complete', as: 'complete_task'
 end
