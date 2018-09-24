@@ -15,7 +15,6 @@
 */
 
 body {
-  font-family: sans-serif;
   color: black;
   background-color: seashell;
   padding: 0;
@@ -29,63 +28,7 @@ h1  {
   color: Darkviolet;
   padding: 0;
   margin-bottom: 0;
-}
-
-.list {
-  display: grid;
-  grid-template: 1fr / 1fr 3fr;
-  padding-left: 0;
-  margin: 0.5px;
-  border: 1px double gray;
-  border-radius: 12px;
-}
-
-li {
-  padding: 5px;
-}
-
-.items {
-  font-family: sans-serif;
-  color: Black;
-  text-decoration: none;
-}
-
-div {
-  display: flex;
-  flex-direction: column;
-  padding: 10px;
-}
-
-
-h3 {
-  text-align:justify;
-  margin: 0.5px;
-}
-
-.new-task-form {
-  display: flex;
-  flex-direction: column;
-  padding: 10px;
-  font-size: 24px;
-}
-
-.button {
-  padding: 10px;
-  border-radius: 12px;
-  border:1px dotted gray;
-  background-color: wheat;
-  font-style: bold;
-  font-size: 15px;
-  margin: 4px 4px;
-}
-
-.field input {
-  width: 500px;
-  padding: 10px;
-}
-
-.field  {
-  font-size: 20px;
+  background-color: yellow;
 }
 
 .footer {
@@ -96,13 +39,20 @@ h3 {
   margin-top: 20px;
 }
 
-#something {
-  text-decoration: line-through;
-  color: black;
-  padding: 0;
-  margin: 0;
+button {
+  padding: 20px;
+  border-radius: 12px;
+  border:1px dotted gray;
+  background-color: wheat;
+  font-style: bold;
+  font-size: 15px;
+  margin: 4px 4px;
 }
 
-strong {
-  text-decoration: none;
+.side_buttons {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 20px 20px;
+
 }

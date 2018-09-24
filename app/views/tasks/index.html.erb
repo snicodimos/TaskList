@@ -1,4 +1,3 @@
-<h1>TASKLIST</h1>
 
 <section class="list_section">
   <h3>YOUR TASKS</h3>
@@ -6,8 +5,8 @@
     <%@tasks.each do |task|%>
     <li class="items">
       <strong >
-          <% if task.completed == true %>
-          <nav id="something">
+        <% if task.completed == true %>
+        <nav id="strike">
           <%= link_to task.action, task_path(task.id)%>
         </nav>
         <% else %>
